@@ -1,17 +1,40 @@
-# Welcome to MkDocs
+# 嵌入式系统
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+你好👋！欢迎来到嵌入式系统课程！
 
-## Commands
+本实验文档适用于2022-2023春夏学期**计算机科学与技术学院**《嵌入式系统》**翁凯老师**班级。
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+💡请在第一次实验课前安装`STM32CubeIDE`，具体方式见[Warm Up](warm_up.md)。
 
-## Project layout
+## 实验日历
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+本课程共包含7个个人实验和1个组队大程。
+
+所有的个人实验均需**验收**并提交**实验报告**。
+
+组队大程需要进行**阶段性验收**并提交**阶段性报告**，最后还需要进行**最终验收**并提交**最终报告**。组队方案以及大程具体要求见[Group Project](group_project.md)。
+
+!!! warning "上传实验报告时，必须单独提交实验报告的pdf文件。如有其他文件需要提交，可以另外打包成zip文件。"
+
+- 个人实验
+    - [Lab 1: 亮灯](lab1/lab1.md)
+    - [Lab 2: MCU时间实验](lab2/lab2.md)
+    - [Lab 3: 自行车码表](lab3/lab3.md)
+    - [Lab 4: 引导装载程序](lab4/lab4.md)
+    - [Lab 5: 温度计](lab5/lab5.md)
+    - [Lab 6: 网络温度计](lab6/lab6.md)
+    - [Lab 7: 字母板](lab7/lab7.md)
+- 组队大程
+    - [Group Project](group_project.md)
+
+## 分数构成
+
+> 待补充
+
+## 验收方式
+
+- 个人实验
+    - 需在**实验报告截止之前**，在实验课上进行线下验收。
+- 组队大程
+    - 阶段性验收：另行通知时间，在实验课上作线下验收；
+    - 最终验收：最后一次实验课上作线下验收。

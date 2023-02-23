@@ -1,6 +1,32 @@
 site_name: 2023_EBD
 site_description: 2023年浙江大学嵌入式系统实验文档
 
+nav:
+  - Home: "index.md"
+  - Warm up: "warm_up.md"
+  - Lab1:
+    - 实验要求: "lab1/lab1.md"
+    - 实验指南: "lab1/lab1_guide.md"
+  - Lab2:
+    - 实验要求: "lab2/lab2.md"
+    - 实验指南: "lab2/lab2_guide.md"
+  - Lab3:
+    - 实验要求: "lab3/lab3.md"
+    - 实验指南: "lab3/lab3_guide.md"
+  - Lab4:
+    - 实验要求: "lab4/lab4.md"
+    - 实验指南: "lab4/lab4_guide.md"
+  - Lab5:
+    - 实验要求: "lab5/lab5.md"
+    - 实验指南: "lab5/lab5_guide.md"
+  - Lab6:
+    - 实验要求: "lab6/lab6.md"
+    - 实验指南: "lab6/lab6_guide.md"
+  - Lab7:
+    - 实验要求: "lab7/lab7.md"
+    - 实验指南: "lab7/lab7_guide.md"
+  - Group Project: "project.md"
+
 theme:
   name: material
   palette:
@@ -28,6 +54,21 @@ markdown_extensions:
   - pymdownx.caret #下划线
   - pymdownx.mark #文本高亮
   - pymdownx.tilde #删除线
+  - pymdownx.arithmatex                             # 数学公式的TeX语法支持
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:                                     # 表情支持
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:                              # 任务清单支持
+      custom_checkbox: true
+  - md_in_html
+  - meta
   - toc: # 大纲
       permalink: true
       slugify: !!python/name:pymdownx.slugs.uslugify

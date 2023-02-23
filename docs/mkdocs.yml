@@ -1,5 +1,7 @@
 site_name: 2023_EBD
 site_description: 2023年浙江大学嵌入式系统实验文档
+repo_url: https://github.com/zjuerDFL/2023_EBD
+repo_name: 2023_EBD
 
 nav:
   - Home: "index.md"

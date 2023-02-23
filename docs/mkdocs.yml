@@ -1,1 +1,33 @@
 site_name: 2023_EBD
+site_description: 2023年浙江大学嵌入式系统实验文档
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: 暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      primary: teal
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 亮色模式
+  # nav_style: light
+  custom_dir: docs/
+  highlightjs: true
+  hljs_languages:
+    - yaml
+
+markdown_extensions:
+  - admonition #MkDocs 警告框
+  - footnotes #脚注
+  - meta #自定义文章元数据
+  - pymdownx.caret #下划线
+  - pymdownx.mark #文本高亮
+  - pymdownx.tilde #删除线
+  - toc: # 大纲
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify

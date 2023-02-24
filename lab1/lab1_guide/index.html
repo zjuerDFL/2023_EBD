@@ -354,6 +354,26 @@
     2 连线
   </a>
   
+    <nav class="md-nav" aria-label="2 连线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-基本连线" class="md-nav__link">
+    2.1 基本连线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-跳线帽" class="md-nav__link">
+    2.2 跳线帽
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -877,6 +897,26 @@
     2 连线
   </a>
   
+    <nav class="md-nav" aria-label="2 连线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-基本连线" class="md-nav__link">
+    2.1 基本连线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-跳线帽" class="md-nav__link">
+    2.2 跳线帽
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -974,13 +1014,15 @@
 
 <h1 id="实验1指南">实验1指南<a class="headerlink" href="#实验1指南" title="Permanent link">&para;</a></h1>
 <h2 id="1-安装软件">1 安装软件<a class="headerlink" href="#1-安装软件" title="Permanent link">&para;</a></h2>
-<p>在ST公司官网下载<a href="https://www.st.com/zh/development-tools/stm32cubeide.html">STM32CubeIDE</a>。这个IDE是基于Eclipse改造的，有Windows、macOS和Linux三个版本。下载时需要注册一个st的帐号，免费的，校网邮箱可用。</p>
-<p>下载后，以默认选项安装。</p>
-<p>对于macOS，解压zip文件后，打开dmg文件，首先双击pkg文件安装ST-Link驱动，然后将app文件拖拽到Application。安装驱动时，需要在“系统偏好设置&rarr;安全性与隐私”处允许允许这个安装程序。第一次运行STM32CubeIDE时，也需要允许运行一次。</p>
+<p>具体见<a href="../warmup.md">Warm Up</a>。</p>
 <h2 id="2-连线">2 连线<a class="headerlink" href="#2-连线" title="Permanent link">&para;</a></h2>
-<p>找出4条杜邦线，要求其中一条红色、一条黑色，另两条其他不同的颜色。</p>
-<p><em>对特定的信号/电源使用特殊的颜色是工程和实验技术的基础要求。至少要求做到电源使用红色，地使用黑色，并且不将红色和黑色用于其他线路。</em></p>
-<p>杜邦线的一头连接103板子侧面的标着GND、DCLK、DIO、3.3V的四个插针，另一头接ST-Link的(2)SWCLK、(4)SWDIO、(6)GND、(8)3.3V。在ST-Link的插针处，有缺口的一侧是奇数，另一侧是偶数。</p>
+<h3 id="21-基本连线">2.1 基本连线<a class="headerlink" href="#21-基本连线" title="Permanent link">&para;</a></h3>
+<p>找出4条杜邦线，要求其中一条红色、一条黑色，另两条为其他颜色。</p>
+<div class="admonition info">
+<p class="admonition-title">对特定的信号/电源使用特殊的颜色是工程和实验技术的基础要求。要求至少做到电源使用红色，地使用黑色，并且不将红色和黑色用于其他线路。</p>
+</div>
+<p>在ST-Link的插针处，有缺口的一侧是奇数，另一侧是偶数。</p>
+<p>杜邦线的一头连接103板子侧面的标着GND、DCLK、DIO、3.3V的四个插针，另一头接ST-Link的 (2) SWCLK、(4) SWDIO、(6) GND、(8) 3.3V。</p>
 <p>连线的对应关系如下表：</p>
 <table>
 <thead>
@@ -1018,21 +1060,28 @@
 </tr>
 </tbody>
 </table>
-<p><img src="../img/1-1.jpeg" style="zoom: 10%;" />
-<img src="../img/1-4.jpeg" style="zoom: 10%;" />
-<img src="../img/1-2.jpeg" style="zoom: 10%;" /></p>
-<p>右图103上的杜邦线的连接，使得四条线的小开口都朝一个方向，这样不仅是美观，最主要的是可以方便将来有必要的时候，用表笔接触这个小开口来做测量。</p>
-<blockquote>
-<p>以这个方式连接，ST-Link是在给103供电。但是ST-Link内的3.3V只能供给大约50mA的电流，所以这只适合于烧录程序和不接其他模块时的简单调试场合。实际工作时，应该使用USB插座或其他外部电源直接给5V或3.3V引脚供电。</p>
-</blockquote>
-<p>在103板上有两个黄色跳线帽，右边分别标着BT0和BT1。这里上下两排各三个插针是两组，上下各一组。两个跳线帽都应该插在左边的两个插针上，如下图所示。这样的话，跳线帽起到把中间的插针和左边的插针连起来的作用。<em>103板的正确方向是主芯片面朝上，USB插座朝左，引脚的文字正确。</em></p>
+<p>连线示意图如下：</p>
+<p><img src="../img/1-5.jpeg" style="zoom: 20%;" /></p>
+<p>连线实物图如下：</p>
+<p><img src="../img/1-2.jpeg" style="zoom: 10%;" /></p>
+<p><img src="../img/1-1.jpeg" style="zoom: 10%;" /></p>
+<p><img src="../img/1-4.jpeg" style="zoom: 10%;" /></p>
+<p>上面几幅图中，4条杜邦线的小开口都朝着同一个方向，除了美观之外，还可以在需要时，方便地用表笔接触这个小开口来做测量。</p>
+<div class="admonition info">
+<p class="admonition-title">在使用上述方式连接时，103板子的供电全部来自ST-Link。但ST-Link内部3.3V的电压只能供给大约50mA的电流。因此这种方式只适用于烧录程序以及不接其他模块时的简单调试场合。在世纪工作时，应使用USB插座或其他外部电源直接给5V或3.3V引脚供电</p>
+</div>
+<h3 id="22-跳线帽">2.2 跳线帽<a class="headerlink" href="#22-跳线帽" title="Permanent link">&para;</a></h3>
+<p>在103板上有两个黄色跳线帽：BT0和BT1。此处有上下两组插针，每组共三个，两个跳线帽应都插在 <strong>左边的两个插针</strong> 上，如下图所示。跳线帽起到将左边和中间插针连起来的作用。</p>
 <p><img src="../img/1-3.jpeg" style="zoom: 25%;" /></p>
-<p>在后面的操作中，如果出现了烧录不进去的情况，BT0这个跳线帽可能要拔下来插到中间和右边的插针上去。</p>
+<div class="admonition info">
+<p class="admonition-title">103板的正确方向为主芯片面朝上，USB插座朝左，引脚文字正常可读。</p>
+</div>
+<p>在之后的操作中，若出现无法烧录的情况，跳线帽BT0可能需要拔下来插到中间和右边的插针上。这往往是由于<a href="#43-调试">Debug选项</a>没有正确设置导致的。具体操作方式见<a href="#43-调试">故障排除</a>。</p>
 <h2 id="3-建立工程">3 建立工程<a class="headerlink" href="#3-建立工程" title="Permanent link">&para;</a></h2>
 <p>启动Cube IDE，选择“Start new STM32 project”。</p>
 <p><img src="../img/3-1.png" alt="3-1" style="zoom: 33%;" /></p>
 <p>如果已经启动过Cube IDE，则在菜单选择“File-&gt;New -&gt;STM32 Project“。</p>
-<p>在“Target Selection”的“Part Number”，输入“STM32F103C8”，然后在右边的“MCUs/MPUs List”那里，点击出现的“Part No”为“STM32F103C8”的列表项。这样右下方的“Next”才会亮起来。</p>
+<p>在“Target Selection”的“Part Number”，输入“STM32F103C8T6”，然后在右边的“MCUs/MPUs List”那里，点击出现的“Part No”为“STM32F103C8T6”的列表项。这样右下方的“Next”才会亮起来。</p>
 <p><img src="../img/3-2.png" alt="3-2" style="zoom:25%;" /></p>
 <p>点击“Next”，然后在“STM32 Project”对话框里，输入工程名称，如“blink”。然后就可以直接点击“Finish”了。</p>
 <p><img src="../img/3-3.png" alt="3-3" style="zoom:33%;" /></p>

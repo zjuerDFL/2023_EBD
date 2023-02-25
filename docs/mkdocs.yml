@@ -6,6 +6,7 @@ repo_name: 2023_EBD
 nav:
   - Home: "index.md"
   - Warm up: "warm_up.md"
+  - Download: "download.md"
   - Lab1:
     - 实验要求: "lab1/lab1.md"
     - 实验指南: "lab1/lab1_guide.md"

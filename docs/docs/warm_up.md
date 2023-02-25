@@ -6,6 +6,7 @@
 
 - 下载方式：[ST公司官网](https://www.st.com/zh/development-tools/stm32cubeide.html)
     - 下载需要注册ST公司的账号，可用校园网邮箱免费注册。
+- 版本选择：选择最新版本（1.11.2）即可。
 - 安装方式：以默认选项安装即可
 - 注意事项：IDE安装包中附带ST-Link驱动，若安装程序未自动安装，请手动安装。
 - 对于MacOS用户：

@@ -33,7 +33,7 @@
 
 - STM32F103C8T6开发板 x 1
 - ST-LINK/V2 x 1
-- USB转TTL x 1
+- USB转UART x 1
 - ESP32开发板 x 1
 - Micro USB线 x 1
 - 面包板 x 1

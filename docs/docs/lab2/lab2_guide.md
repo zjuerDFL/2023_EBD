@@ -1,6 +1,6 @@
 # 实验2指南
 
-!!! danger "本实验指南尚未发布，内容随时可能发生变化，个人水平有限，如您发现文档中的疏漏欢迎 Issue！"
+!!! danger "本实验指南尚未发布，内容随时可能发生变化"
 
 <div style="display:none">
 
@@ -118,5 +118,7 @@ CoolTerm是一款开源的串口调试助手，其下载地址为 **<u>[CoolTerm
 另外，在Project Manager的Code Generator，勾选“Generate peripheral initiallization as a pair of '.c/.h' files per peripheral”（每个功能生成独立的.c和.h文件）。
 
 这样，在源码目录Src下会有gpio.h/c和usart.h/c。
+
+!!! note "个人水平有限，如您发现文档中的疏漏欢迎 Issue！"
 
 </div>

@@ -4,7 +4,7 @@
 
 > STM32CubeIDE是ST公司提供的一款集成开发环境（IDE），用于开发STM32系列的MCU。此IDE基于Eclipse改造，支持Windows，MacOS以及Linux。Lab1-5均需要在此IDE上完成。
 
-- 下载方式：[ST公司官网](https://www.st.com/zh/development-tools/stm32cubeide.html)
+- 下载方式： **<u>[ST公司官网](https://www.st.com/zh/development-tools/stm32cubeide.html)</u>** 
     - 下载需要注册ST公司的账号，可用校园网邮箱免费注册。
 - 版本选择：选择最新版本（1.11.2）即可。
 - 安装方式：以默认选项安装即可

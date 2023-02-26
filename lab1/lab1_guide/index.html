@@ -1300,9 +1300,9 @@
 
 
 <h1 id="实验1指南">实验1指南<a class="headerlink" href="#实验1指南" title="Permanent link">&para;</a></h1>
-<p>请跟随实验指南完成实验，完成文档中所有的<code>TASK</code>。<code>EXTRA</code>部分的内容完成可作为加分，但报告的总分不应超过100分。请下载此指南作为实验报告模版，将填充完成的实验报告导出为PDF格式，并命名为“学号_姓名_lab1.pdf”，上传至学在浙大平台。下载请点击<a href="../../download/">这里</a>。</p>
+<p>请跟随实验指南完成实验，完成文档中所有的<code>TASK</code>。<code>EXTRA</code>部分的内容完成可作为加分，但报告的总分不应超过100分。请下载此指南作为实验报告模版，将填充完成的实验报告导出为PDF格式，并命名为“学号_姓名_lab1.pdf”，上传至学在浙大平台。下载请点击 <strong><u><a href="../../download/">这里</a></u></strong> 。</p>
 <h2 id="1-安装软件">1 安装软件<a class="headerlink" href="#1-安装软件" title="Permanent link">&para;</a></h2>
-<p>具体见<a href="../../warm_up/">Warm Up</a>。</p>
+<p>具体见 <strong><u><a href="../../warm_up/">Warm Up</a></u></strong> 。</p>
 <h2 id="2-连线">2 连线<a class="headerlink" href="#2-连线" title="Permanent link">&para;</a></h2>
 <h3 id="21-103板和st-link的连线">2.1 103板和ST-Link的连线<a class="headerlink" href="#21-103板和st-link的连线" title="Permanent link">&para;</a></h3>
 <p>按照下图的对应关系，使用杜邦线将103板和ST-Link连接起来。</p>
@@ -1355,7 +1355,7 @@
 </div>
 <h3 id="22-按钮的连接">2.2 按钮的连接<a class="headerlink" href="#22-按钮的连接" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>此步骤也可在<a href="#51-点灯">点灯</a>代码填充完毕并成功编译运行之后完成。</p>
+<p>此步骤也可在 <strong><u><a href="#51-点灯">点灯</a></u></strong> 代码填充完毕并成功编译运行之后完成。</p>
 </blockquote>
 <h4 id="221-按钮介绍">2.2.1 按钮介绍<a class="headerlink" href="#221-按钮介绍" title="Permanent link">&para;</a></h4>
 <p>按键是一种常见的输入设备，它可以用来控制系统的运行状态。在本实验中，我们将使用一个按键来控制LED的亮灭。</p>
@@ -1383,7 +1383,7 @@
 <div class="admonition info">
 <p class="admonition-title">103板的正确方向为主芯片面朝上，USB插座朝左，引脚文字正常可读。</p>
 </div>
-<p>在之后的操作中，若出现无法烧录的情况，跳线帽BT0可能需要拔下来插到中间和右边的插针上。这往往是由于没有<a href="#43-启用调试">启用调试</a>导致的。具体操作方式见<a href="#7-故障排除">故障排除</a>。</p>
+<p>在之后的操作中，若出现无法烧录的情况，跳线帽BT0可能需要拔下来插到中间和右边的插针上。这往往是由于没有 <strong><u><a href="#43-启用调试">启用调试</a></u></strong> 导致的。具体操作方式见 <strong><u><a href="#7-故障排除">故障排除</a></u></strong> 。</p>
 <h2 id="3-建立工程">3 建立工程<a class="headerlink" href="#3-建立工程" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -1453,7 +1453,7 @@
 <p>这个“LED”将来会出现在<code>main.h</code>里，它构成了两个宏，在程序中可以直接使用，用来表达这个引脚。</p>
 <h3 id="42-按钮引脚">4.2 按钮引脚<a class="headerlink" href="#42-按钮引脚" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>此步骤也可在<a href="#51-点灯">点灯</a>代码填充完毕并成功编译运行之后完成。</p>
+<p>此步骤也可在 <strong><u><a href="#51-点灯">点灯</a></u></strong> 代码填充完毕并成功编译运行之后完成。</p>
 </blockquote>
 <p>参考LED引脚，为按钮进行引脚配置，模式选择为<code>GPIO_Input</code>，命名为<code>BTN</code></p>
 <div class="admonition info">
@@ -1512,7 +1512,7 @@
 <p>芯片图右上角的SWDIO和SWCLK引脚就是之前连线时接的那两个引脚。</p>
 <p><img src="../img/4-9.png" style="zoom:33%;" /></p>
 <div class="admonition warning">
-<p class="admonition-title">如果忘了做这个选择，一旦烧录程序进板子之后，需要用特殊的流程（见<a href="#7-故障排除">故障排除</a>）才能重新做下一次烧录。如果做了这个选择，便可以不用动硬件和连线，直接多次烧录程序。</p>
+<p class="admonition-title">如果忘了做这个选择，一旦烧录程序进板子之后，需要用特殊的流程（见 <strong><u><a href="#7-故障排除">故障排除</a></u></strong> ）才能重新做下一次烧录。如果做了这个选择，便可以不用动硬件和连线，直接多次烧录程序。</p>
 </div>
 <h3 id="44-产生代码">4.4 产生代码<a class="headerlink" href="#44-产生代码" title="Permanent link">&para;</a></h3>
 <p>至此，实验一的所有配置完成。接下来需要保存配置文件（blink.ioc）。</p>
@@ -1552,13 +1552,13 @@
 <blockquote>
 <p><code>HAL_GPIO_TogglePin</code>函数用于翻转引脚电平。参数为引脚所在的端口和引脚。</p>
 <p><code>HAL_Delay</code>函数用于延时。参数为延时时间，单位为毫秒。</p>
-<p>这里用到了HAL（Hardware Abstraction Layer）库的函数。HAL对硬件底层进行了抽象，很好的解决了程序移植到不同型号的STM32芯片上的问题。HAL库在代码上相对标准库更加简洁，但效率可能会略微偏低。有关HAL库的使用方法可以参考<a href="https://www.st.com/content/ccc/resource/technical/document/user_manual/2f/71/ba/b8/75/54/47/cf/DM00105879.pdf/files/DM00105879.pdf/jcr:content/translations/en.DM00105879.pdf" target="_blank">HAL手册</a>。</p>
+<p>这里用到了HAL（Hardware Abstraction Layer）库的函数。HAL对硬件底层进行了抽象，很好的解决了程序移植到不同型号的STM32芯片上的问题。HAL库在代码上相对标准库更加简洁，但效率可能会略微偏低。有关HAL库的使用方法可以参考 <strong><u><a href="https://www.st.com/content/ccc/resource/technical/document/user_manual/2f/71/ba/b8/75/54/47/cf/DM00105879.pdf/files/DM00105879.pdf/jcr:content/translations/en.DM00105879.pdf" target="_blank">HAL手册</a></u></strong> 。</p>
 </blockquote>
 <h4 id="512-不使用togglepin">5.1.2 不使用TogglePin<a class="headerlink" href="#512-不使用togglepin" title="Permanent link">&para;</a></h4>
 <p><code>TASK9</code> <mark>请在HAL库中找到其他GPIO控制函数（不使用<code>HAL_GPIO_TogglePin</code>）实现灯光的闪烁，将代码填写在下方</mark>（15分）</p>
 <h3 id="52-按键">5.2 按键<a class="headerlink" href="#52-按键" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>此步骤也可在<a href="#51-点灯">点灯</a>代码填充完毕并成功编译运行之后完成。</p>
+<p>此步骤也可在 <strong><u><a href="#51-点灯">点灯</a></u></strong> 代码填充完毕并成功编译运行之后完成。</p>
 </blockquote>
 <h4 id="521-按键按下时点亮松开时熄灭">5.2.1 按键按下时点亮，松开时熄灭<a class="headerlink" href="#521-按键按下时点亮松开时熄灭" title="Permanent link">&para;</a></h4>
 <p>更改<a href="#51-点灯">点灯</a>中的代码，使得按下按键时，LED灯亮，松开按键时，LED灯灭。</p>
@@ -1568,7 +1568,7 @@
 <p>与数逻实验中的按钮相同，此处也需要实现按键防抖功能，否则按下或松开按键时，LED灯会闪烁。</p>
 <p><code>TASK11</code> <mark>请在下方填写实现代码</mark>（15分）</p>
 <h2 id="6-编译下载">6 编译下载<a class="headerlink" href="#6-编译下载" title="Permanent link">&para;</a></h2>
-<p>在<a href="#5-代码填充">代码填充</a>中任意实现某功能后，均可进行编译运行以检验功能是否实现。</p>
+<p>在 <strong><u><a href="#5-代码填充">代码填充</a></u></strong> 中任意实现某功能后，均可进行编译运行以检验功能是否实现。</p>
 <h3 id="61-尝试编译">6.1 尝试编译<a class="headerlink" href="#61-尝试编译" title="Permanent link">&para;</a></h3>
 <p>第一次编译前，先把ST-Link插上电脑的USB接口。</p>
 <p>然后点击工具条里的绿色播放按钮，或菜单选择Run-&gt;Run。</p>
@@ -1592,17 +1592,20 @@
 <p>就表明下载成功了。</p>
 <p>此时，板上标着<code>TST</code>的LED就应该开始闪烁了。</p>
 <h2 id="7-故障排除">7 故障排除<a class="headerlink" href="#7-故障排除" title="Permanent link">&para;</a></h2>
-<p>若之前烧录在板上的程序没有按照要求<a href="#43-启用调试">启用调试</a>，就会造成后续烧录失败。</p>
+<p>若之前烧录在板上的程序没有按照要求 <strong><u><a href="#43-启用调试">启用调试</a></u></strong> ，就会造成后续烧录失败。</p>
 <p>解决的办法是，拔下BT0的跳线帽，把它插到右边的两个插针上，如下图：</p>
 <p><img src="../img/7-1.jpeg" style="zoom:25%;" /></p>
-<p>然后按一下板上的RST按钮（黄色跳线下方）。做完这些，再回到CubeIDE上<a href="#6-编译下载">编译下载</a>。下载完成后，将跳线帽插回左边的位置，再按下RST按钮，程序就运行起来了。</p>
+<p>然后按一下板上的RST按钮（黄色跳线下方）。做完这些，再回到CubeIDE上 <strong><u><a href="#6-编译下载">编译下载</a></u></strong> 。下载完成后，将跳线帽插回左边的位置，再按下RST按钮，程序就运行起来了。</p>
 <blockquote>
-<p>只要按照要求<a href="#43-启用调试">启用调试</a>，今后就不再需要切换BT0跳线了，也不再需要按RST按钮。</p>
+<p>只要按照要求 <strong><u><a href="#43-启用调试">启用调试</a></u></strong>，今后就不再需要切换BT0跳线了，也不再需要按RST按钮。</p>
 </blockquote>
 <h2 id="8-拓展内容">8 拓展内容<a class="headerlink" href="#8-拓展内容" title="Permanent link">&para;</a></h2>
 <p><code>EXTRA1</code> <mark>用示波器或逻辑分析仪测试LED闪烁时PC13上输出的频率</mark>（可补5分，报告总分不超过100分）</p>
 <p><code>EXTRA2</code> <mark>找出能够产生的最高的输出频率</mark>（可补5分，报告总分不超过100分）</p>
 <h2 id="9-讨论和心得">9 讨论和心得<a class="headerlink" href="#9-讨论和心得" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>请认真填写本模块，若不填写或胡乱填写将酌情扣分，写明白真实情况即可。</p>
+</blockquote>
 <p>请在此处填写实验过程中遇到的问题及相应的解决方式。</p>
 <p>由于本实验为新实验，可能存在不足之处，欢迎同学们对本实验提出建议。</p>
 

@@ -508,68 +508,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          实验要求
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         实验要求
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#实验目的" class="md-nav__link">
-    实验目的
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#实验器材" class="md-nav__link">
-    实验器材
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#实验步骤" class="md-nav__link">
-    实验步骤
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#扩展内容" class="md-nav__link">
-    扩展内容
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#实验报告要求" class="md-nav__link">
-    实验报告要求
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -820,49 +761,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#实验目的" class="md-nav__link">
-    实验目的
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#实验器材" class="md-nav__link">
-    实验器材
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#实验步骤" class="md-nav__link">
-    实验步骤
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#扩展内容" class="md-nav__link">
-    扩展内容
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#实验报告要求" class="md-nav__link">
-    实验报告要求
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -883,39 +781,46 @@
 <div class="admonition danger">
 <p class="admonition-title">本实验尚未发布，内容随时可能发生变化，个人水平有限，如您发现文档中的疏漏欢迎 Issue！</p>
 </div>
-<p>这个实验的目的是进一步掌握如何在MCU上编写裸机程序，理解bootloader的一般工作原理。</p>
-<p>本实验配有<a href="../lab4_guide/">实验指南</a>。</p>
-<h2 id="实验目的">实验目的<a class="headerlink" href="#实验目的" title="Permanent link">&para;</a></h2>
-<ol>
-<li>熟练掌握在STM32F103上编写交互程序的方法；</li>
-<li>理解bootloader的一般功能和基本工作原理；</li>
-<li>掌握调整编译链接参数以形成定制的编译结果的方法。</li>
-</ol>
-<h2 id="实验器材">实验器材<a class="headerlink" href="#实验器材" title="Permanent link">&para;</a></h2>
-<p>与实验1相同。</p>
-<h2 id="实验步骤">实验步骤<a class="headerlink" href="#实验步骤" title="Permanent link">&para;</a></h2>
-<ol>
-<li>编写一个交互对话程序，能通过串口收到PC的指令，并分离出命令字和参数，将分离的结果返回；</li>
-<li>写一个简易bootloader，能通过串口执行四条最简单的指令：</li>
-<li><code>peek &lt;addr&gt;</code> 以一个字为单位读取内存中 addr 位置的数据(addr是4字节对齐,十六进制的
-     形式,长度为8位十六进制,没有引导字符，例如 <code>00008000)</code>,并以十六进制的形式输出结果，输出结果为自然序（高位在前）</li>
-<li><code>poke &lt;addr&gt; &lt;data&gt;</code> 以一个字为单位修改内存中 addr 位置的数据为 data(addr 是 4 字节对齐,十六进制的形式,长度为8位十六进制, data 也是十六进制的形式,长度为8位十六进制，为自然序高位在前)</li>
-<li><code>load &lt;addr&gt;</code> 启动XModem或ZModem协议，从PC接收一段二进制数据，保存在addr开始的RAM中</li>
-<li><code>run &lt;addr&gt;</code> 运行RAM地址addr开始的程序</li>
-<li>重新编译链接实验1的按钮控制LED程序（必须没有开任何中断），将目标定位在RAM中，用步骤2的bootloader下载到RAM中运行。</li>
-</ol>
-<h2 id="扩展内容">扩展内容<a class="headerlink" href="#扩展内容" title="Permanent link">&para;</a></h2>
-<ol>
-<li>增加命令<code>print &lt;addr&gt;</code>，以字符形式输出从addr开始的字节，直到0x00为止，addr不需要是4字节对齐的。</li>
-</ol>
-<h2 id="实验报告要求">实验报告要求<a class="headerlink" href="#实验报告要求" title="Permanent link">&para;</a></h2>
-<ol>
-<li>画出你所实际实施的连接示意图；</li>
-<li>给出所用的器材的列表；</li>
-<li>描述所做的实验步骤，给出各步操作的命令和结果；</li>
-<li>给出你的程序的代码，并加以解释；</li>
-<li>给出测试的结果。</li>
-</ol>
+<div style="display:none">
+
+这个实验的目的是进一步掌握如何在MCU上编写裸机程序，理解bootloader的一般工作原理。
+
+本实验配有[实验指南](lab4_guide.md)。
+
+## 实验目的
+
+1. 熟练掌握在STM32F103上编写交互程序的方法；
+2. 理解bootloader的一般功能和基本工作原理；
+3. 掌握调整编译链接参数以形成定制的编译结果的方法。
+
+## 实验器材
+
+与实验1相同。
+
+## 实验步骤
+
+1. 编写一个交互对话程序，能通过串口收到PC的指令，并分离出命令字和参数，将分离的结果返回；
+2. 写一个简易bootloader，能通过串口执行四条最简单的指令：
+   - `peek <addr>` 以一个字为单位读取内存中 addr 位置的数据(addr是4字节对齐,十六进制的
+     形式,长度为8位十六进制,没有引导字符，例如 `00008000)`,并以十六进制的形式输出结果，输出结果为自然序（高位在前）
+   - `poke <addr> <data>` 以一个字为单位修改内存中 addr 位置的数据为 data(addr 是 4 字节对齐,十六进制的形式,长度为8位十六进制, data 也是十六进制的形式,长度为8位十六进制，为自然序高位在前)
+   - `load <addr>` 启动XModem或ZModem协议，从PC接收一段二进制数据，保存在addr开始的RAM中
+   - `run <addr>` 运行RAM地址addr开始的程序
+3. 重新编译链接实验1的按钮控制LED程序（必须没有开任何中断），将目标定位在RAM中，用步骤2的bootloader下载到RAM中运行。
+
+## 扩展内容
+
+1. 增加命令`print <addr>`，以字符形式输出从addr开始的字节，直到0x00为止，addr不需要是4字节对齐的。
+
+## 实验报告要求
+
+1. 画出你所实际实施的连接示意图；
+2. 给出所用的器材的列表；
+3. 描述所做的实验步骤，给出各步操作的命令和结果；
+4. 给出你的程序的代码，并加以解释；
+5. 给出测试的结果。
+
+</div>
 
 
 

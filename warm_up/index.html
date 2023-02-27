@@ -285,8 +285,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#stm32cubeide-安装" class="md-nav__link">
-    STM32CubeIDE 安装
+  <a href="#1-stm32cubeide-安装" class="md-nav__link">
+    1 STM32CubeIDE 安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-逻辑分析仪-nanodla-教程" class="md-nav__link">
+    2 逻辑分析仪 nanoDLA 教程
+  </a>
+  
+    <nav class="md-nav" aria-label="2 逻辑分析仪 nanoDLA 教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-上位机软件下载" class="md-nav__link">
+    2.1 上位机软件下载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-驱动安装" class="md-nav__link">
+    2.2 驱动安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-pulseview-使用" class="md-nav__link">
+    2.3 PulseView 使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-虚拟示波器教程" class="md-nav__link">
+    3 虚拟示波器教程
   </a>
   
 </li>
@@ -797,8 +838,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#stm32cubeide-安装" class="md-nav__link">
-    STM32CubeIDE 安装
+  <a href="#1-stm32cubeide-安装" class="md-nav__link">
+    1 STM32CubeIDE 安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-逻辑分析仪-nanodla-教程" class="md-nav__link">
+    2 逻辑分析仪 nanoDLA 教程
+  </a>
+  
+    <nav class="md-nav" aria-label="2 逻辑分析仪 nanoDLA 教程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-上位机软件下载" class="md-nav__link">
+    2.1 上位机软件下载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-驱动安装" class="md-nav__link">
+    2.2 驱动安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-pulseview-使用" class="md-nav__link">
+    2.3 PulseView 使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-虚拟示波器教程" class="md-nav__link">
+    3 虚拟示波器教程
   </a>
   
 </li>
@@ -822,7 +904,7 @@
 
 
 <h1 id="课前准备">课前准备<a class="headerlink" href="#课前准备" title="Permanent link">&para;</a></h1>
-<h2 id="stm32cubeide-安装">STM32CubeIDE 安装<a class="headerlink" href="#stm32cubeide-安装" title="Permanent link">&para;</a></h2>
+<h2 id="1-stm32cubeide-安装">1 STM32CubeIDE 安装<a class="headerlink" href="#1-stm32cubeide-安装" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>STM32CubeIDE是ST公司提供的一款集成开发环境（IDE），用于开发STM32系列的MCU。此IDE基于Eclipse改造，支持Windows，MacOS以及Linux。Lab1-5均需要在此IDE上完成。</p>
 </blockquote>
@@ -841,6 +923,37 @@
 </ul>
 </li>
 </ul>
+<h2 id="2-逻辑分析仪-nanodla-教程">2 逻辑分析仪 nanoDLA 教程<a class="headerlink" href="#2-逻辑分析仪-nanodla-教程" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>nanoDLA 是 MuseLab 推出硬件软件以及上位机均开源的逻辑分析仪。支持最高24Mhz采样率，8通道可同时采样。支持Windows/Linux/Mac/Android平台下使用。Lab5需要使用逻辑分析仪来分析DHT11传感器的数据。</p>
+</blockquote>
+<p>提供的 nanoDLA 为 <a href="https://item.taobao.com/item.htm?spm=2013.1.0.0.58b8333eL0dcfJ&amp;id=642354490902">nanoDLA-USB-C</a> ，板上接口为 USB-C 的母口，需要自备一根 USB-C 数据线和上位机连接。</p>
+<blockquote>
+<p>此教程参考了 nanoDLA 的 <a href="https://github.com/wuxx/nanoDLA">官方文档</a> 。</p>
+</blockquote>
+<h3 id="21-上位机软件下载">2.1 上位机软件下载<a class="headerlink" href="#21-上位机软件下载" title="Permanent link">&para;</a></h3>
+<p>nanoDLA使用开源的PulseView作为上位机软件。可在其 <strong><u><a href="https://github.com/wuxx/nanoDLA/tree/master/software">GitHub 页面</a></u></strong> 进行下载。</p>
+<p>安装过程只需按照默认设置连续点击下一步安装即可。</p>
+<h3 id="22-驱动安装">2.2 驱动安装<a class="headerlink" href="#22-驱动安装" title="Permanent link">&para;</a></h3>
+<p>插入nanoDLA，此时会设备管理器中识别出fxlafw设备，如图所示:</p>
+<p><img src="https://github.com/wuxx/nanoDLA/blob/master/doc/usb_device_unknown_v1.2.png?raw=true" alt="usb_device_unknown" style="zoom:100%;" /></p>
+<p>在安装PulseView时，会自动安装Zadig，打开Zadig后选择Options-&gt;List All Devices，上方选择对应nanoDLA的fx2lafw（USB ID为 1D50:608C），下方在驱动栏选择WinUSB驱动，点击Install Driver安装驱动即可，稍等片刻，即可成功安装驱动。</p>
+<p><img src="https://github.com/wuxx/nanoDLA/blob/master/doc/zadig_install1_v1.2.png?raw=true" alt="zadig_install1" style="zoom:100%;" /></p>
+<p>成功安装驱动后，设备可被正常识别，如图所示：</p>
+<p><img src="https://github.com/wuxx/nanoDLA/blob/master/doc/usb_device_default_v1.2.png?raw=true" alt="usb_device_default" style="zoom:75%;" /></p>
+<div class="admonition note">
+<p class="admonition-title">对于MacOS，无需使用Zadig安装驱动，可跳过此步</p>
+</div>
+<h3 id="23-pulseview-使用">2.3 PulseView 使用<a class="headerlink" href="#23-pulseview-使用" title="Permanent link">&para;</a></h3>
+<p>将nanoDLA插入PC中，然后打开PulseView，PulseView启动后，会自动搜索并打开fx2lafw设备，如图所示</p>
+<p><img src="https://github.com/wuxx/nanoDLA/blob/master/doc/usb_device_fx2lafw.png?raw=true" alt="usb_device_fx2lafw" style="zoom:60%;" /></p>
+<p>PulseView使用上比较简单，在下方菜单栏中配置采样数据大小和采样率，点击左上角run按钮，即可开始采样，对于nanoDLA，最高可配置24Mhz的采样率进行工作，8通道同时进行工作</p>
+<p><img src="https://github.com/wuxx/nanoDLA/blob/master/doc/pulseview2.png?raw=true" alt="pulseview2" style="zoom:68%;" /></p>
+<p><img src="https://github.com/wuxx/nanoDLA/blob/master/doc/pulseview3.png?raw=true" alt="pulseview3" style="zoom:50%;" /></p>
+<h2 id="3-虚拟示波器教程">3 虚拟示波器教程<a class="headerlink" href="#3-虚拟示波器教程" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>待补充</p>
+</blockquote>
 
 
 

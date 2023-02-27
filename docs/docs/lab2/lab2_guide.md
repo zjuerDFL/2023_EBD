@@ -2,7 +2,7 @@
 
 !!! danger "本实验指南尚未发布，内容随时可能发生变化"
 
-<div style="display:none">
+<!-- <div style="display:none"> -->
 
 请跟随实验指南完成实验，完成文档中所有的`TASK`。`BONUS`部分的内容完成可作为加分，但报告的总分不应超过100分。请下载此指南作为实验报告模版，将填充完成的实验报告导出为PDF格式，并命名为“学号_姓名_lab2.pdf”，上传至学在浙大平台。下载请点击 **<u>[这里](../download.md)</u>** 。
 
@@ -110,15 +110,43 @@ CoolTerm是一款开源的串口调试助手，其下载地址为 **<u>[CoolTerm
 这次要多配置的是Connectivity里的USART。
 
 - 点击Connectivity-->USATR1；
+
 - 设置MODE为`Asynchronous`（异步通信）；
+
 - Parameter Setting：Basic Parameters：均采用默认不修改：波特率为115200 Bits/s。传输数据长度为8 Bit，奇偶检验无，停止位1。
-- GPIO Setting：看到PA9为USART1_TX，PA10为USART1_RX；
+
+- GPIO Settings：看到PA9为USART1_TX，PA10为USART1_RX；
+
 - NVIC Settings：使能UASRT1 global interrupt。
 
-另外，在Project Manager的Code Generator，勾选“Generate peripheral initiallization as a pair of '.c/.h' files per peripheral”（每个功能生成独立的.c和.h文件）。
+另外，在Project Manager的Code Generator，勾选“Generate peripheral initiallization as a pair of '.c/.h' files per peripheral”（每个功能生成独立的.c和.h文件）。勾选后再生成代码，可以将所有的功能分别生成独立的.c和.h文件，方便我们后面的实验。本实验中会生成usart.c/h和gpio.c/h。
 
-这样，在源码目录Src下会有gpio.h/c和usart.h/c。
+`TASK3` ==请给出工程配置完成后自动生成代码后的层次结构截图，要求展开Core文件夹中的Inc、Src和Startup三个文件夹==（5分）
+
+## 3 连线
+
+连线之前将USB-Hub从电脑上拔掉，在断电状态下进行操作。本实验中其余器件的连接方式参考Lab 1。需要额外进行连线的是CP2102和103板。
+
+CP2102板的末端有6根插针，它们的标字在背面，顺着字的方向，依次是DTR、RXD、TXD、VCC、CTS和GND。
+
+<img src="../img/1-5.jpeg" style="zoom:20%;" />
+
+CP2102和103板的连线方式如下表所示：
+
+| 103  | CP2102 | 颜色 | 意义             |
+| ---- | ------ | ---- | --------------- |
+| A9   | RXD    |      | 103发送数据给PC   |
+| A10  | TXD    |      | PC发送数据给103   |
+| GND  | GND    | 黑色  | 地              |
+
+`TASK4` ==请在下方放上完整连接的实物图，包括CP2102、103板、开关和ST-Link==（5分）
+
+`TASK5` ==我们可以观察到，CP2102板子上也有VCC，已知此VCC输出电压为3.3V。请问在 **不改变当前其他连线** 情况下，可以将此VCC和103板的3.3V连接起来为其供电吗？如果不行，请说明原因。==（5分）
+
+## 4 串口通信
+
+### 4.1 轮询输出
 
 !!! note "个人水平有限，如您发现文档中的疏漏欢迎 Issue！"
 
-</div>
+<!-- </div> -->

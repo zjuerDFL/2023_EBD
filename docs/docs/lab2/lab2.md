@@ -26,7 +26,7 @@
 
 采用和实验1相同的软件。
 
-选择合适的串口软件，如Putty（Windows）、picocom（Linux、macOS）。
+选择合适的串口软件，如PuTTY（Windows）、picocom（Linux、macOS）。
 
 ## 实验步骤
 

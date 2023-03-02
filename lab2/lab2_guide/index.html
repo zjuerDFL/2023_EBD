@@ -1340,6 +1340,10 @@ Terminal ready
 
 <p>其中freq为目的定时器频率（在这里即为PWM输出频率），SysClock为时钟源频率，PSC为预分频寄存器的值，ARR为自动重载寄存器的值。我们可以通过调整自动重载值和预分配系数，来调整PWM的输出频率。</p>
 <p><code>TASK10</code> <mark>请在下方给出你所配置的 Tim Mode 以及 Counter Settings 截图，并根据公式计算出理论上的方波频率</mark>（5分）</p>
+<div class="admonition tip">
+<p class="admonition-title">参考资料</p>
+<p><a href="https://blog.csdn.net/ASWaterbenben/article/details/93364476">STM32Cube的PWM控制基础篇</a></p>
+</div>
 <p>PWM的占空比指的是高电平所占的时间比例，占空比越大，方波的高电平时间越长，低电平时间越短。占空比（duty）的计算方法如下：</p>
 <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>d</mi><mi>u</mi><mi>t</mi><mi>y</mi><mo>=</mo><mfrac><mrow><mi>C</mi><mi>C</mi><mi>R</mi><mi>x</mi></mrow><mrow><mi>A</mi><mi>R</mi><mi>R</mi><mo>+</mo><mn>1</mn></mrow></mfrac></math>
 

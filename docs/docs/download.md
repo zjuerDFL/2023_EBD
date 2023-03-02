@@ -5,4 +5,6 @@
 下载文件请右键点击链接，选择“另存为”或“下载链接为”。否则会在浏览器中直接打开相应文件，可能会产生乱码。
 
 - <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab1/lab1_guide.md" target="_blank" download="lab1_guide.md" >lab1.md</a>
-- <a href="https://dfl-image.oss-cn-hangzhou.aliyuncs.com/2023_EBD/lab1_guide.pdf" target="_blank" download="lab1_guide.pdf">lab1.pdf</a>
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab1/lab1_guide.pdf" target="_blank" download="lab1_guide.pdf">lab1.pdf</a>
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab1/lab2_guide.md" target="_blank" download="lab2_guide.md" >lab2.md</a>
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab1/lab2_guide.pdf" target="_blank" download="lab2_guide.pdf">lab2.pdf</a>

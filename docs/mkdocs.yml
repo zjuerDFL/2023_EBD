@@ -57,7 +57,8 @@ markdown_extensions:
   - pymdownx.caret #下划线
   - pymdownx.mark #文本高亮
   - pymdownx.tilde #删除线
-  - pymdownx.arithmatex                             # 数学公式的TeX语法支持
+  - pymdownx.arithmatex:                             # 数学公式的TeX语法支持
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.critic

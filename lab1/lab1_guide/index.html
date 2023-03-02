@@ -1544,6 +1544,7 @@
 <p><code>TASK8</code> <mark>请找出<code>main.h</code>中BTN引脚和端口的宏定义，并参照LED宏定义对其作简要解释。</mark>（5分）</p>
 <h2 id="5-代码填充">5 代码填充<a class="headerlink" href="#5-代码填充" title="Permanent link">&para;</a></h2>
 <h3 id="51-点灯">5.1 点灯<a class="headerlink" href="#51-点灯" title="Permanent link">&para;</a></h3>
+<p>要求：每隔500ms，LED切换一次状态。</p>
 <h4 id="511-使用togglepin">5.1.1 使用TogglePin<a class="headerlink" href="#511-使用togglepin" title="Permanent link">&para;</a></h4>
 <p>在<code>main.c</code>中<code>main()</code>函数的<code>while(1)</code>循环中，找到<code>/* USER CODE BEGIN 3*/</code>，在这之后填入如下代码：</p>
 <div class="highlight"><pre><span></span><code><span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">LED_GPIO_Port</span><span class="p">,</span><span class="w"> </span><span class="n">LED_Pin</span><span class="p">);</span>

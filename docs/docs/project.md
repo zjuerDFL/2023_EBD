@@ -49,6 +49,8 @@
 
     - 此库使用ESP系列MCU作为上位机，使用ESP-IDF开发框架，实现了SX1262/SX1268/LLCC68的驱动。
 
+- [LoRa FAQ](https://docs.ai-thinker.com/_media/lora/docs/安信可lora_lorawan模组系列常见问题.pdf)
+
 !!! note "个人水平有限，如您发现文档中的疏漏欢迎 Issue！"
 
 </div>

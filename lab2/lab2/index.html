@@ -367,9 +367,95 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          实验要求
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         实验要求
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+    <nav class="md-nav" aria-label="实验器材">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#硬件" class="md-nav__link">
+    硬件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软件" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#扩展内容" class="md-nav__link">
+    扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -761,6 +847,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+    <nav class="md-nav" aria-label="实验器材">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#硬件" class="md-nav__link">
+    硬件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软件" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#扩展内容" class="md-nav__link">
+    扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -780,65 +936,59 @@
 <h1 id="实验2-mcu时间实验">实验2: MCU时间实验<a class="headerlink" href="#实验2-mcu时间实验" title="Permanent link">&para;</a></h1>
 <!-- !!! danger "本实验尚未发布，内容随时可能发生变化" -->
 
-<div style="display:none">
+<!-- <div style="display:none"> -->
 
-这次实验，目的在于熟悉C语言在嵌入式开发中的使用，学习如何通过串口输出数据给PC，理解如何用C语言操纵MCU的时间。
-
-本实验配有 **<u><font size=6>[实验指南](lab2_guide.md)</font></u>** 。
-
-## 实验目的
-
-1. 熟练掌握编写MCU程序的一般方法；
-2. 掌握PC上的串口软件，掌握MCU串口程序编写方法；
-3. 掌握MCU的中断响应程序编写方法；
-4. 熟练掌握MCU的时钟中断配置和时钟中断程序响应程序的编写方法；
-5. 掌握MCU程序的定时和获得时间的方法（采用SysTick和定时器中断两种方法）。
-
-## 实验器材
-
-### 硬件
-
-较实验1增加一块USB转串口模块（CP2102）。
-
-### 软件
-
-采用和实验1相同的软件。
-
-选择合适的串口软件，如PuTTY（Windows）、picocom（Linux、macOS）。
-
-## 实验步骤
-
-> 此为实验报告的整体步骤，具体的实验步骤请参考 **<u>[实验指南](lab2_guide.md)</u>** 。
-
-1. 恢复实验1的连线和程序；
-2. 编写程序，从串口以轮询方式输出“Hello World”；
-3. 编写程序，从串口输出测量到的按钮按下到抬起的时间长度（同样要注意去抖动）；
-4. 编写程序，从某个GPIO口输出方波；
-5. 组内两位同学交叉连线，一位同学的MCU输出脉冲，另一位同学的MCU测量这个脉冲的高电平时间长度（注意两块板子要共地）。
-
-## 扩展内容
-
-1. 在轮询之外，用中断、DMA两种方式来输出串口数据；
-2. 用引脚中断来处理按钮和测量时间；
-3. 试探能够测量的最小脉冲宽度。
-
-## 实验报告要求
-
-> 此为实验报告的整体要求，具体的实验步骤请参考 **<u>[实验指南](lab2_guide.md)</u>** 。
-
-1. 画出你所实际实施的连接示意图；
-2. 给出实际拍摄的板卡连接照片；
-3. 给出所用的器材的列表；
-4. 给出实验各步骤的源代码和实验结果；
-5. 说明其他所做的扩展内容的情况。
-
-## 验收要求
-
-1. 现场烧录程序，实现在串口输出测量到的按钮按下到抬起的时间长度（使用SysTick或TIM均可）；
-2. 现场烧录程序，实现在某个GPIO口输出方波，另一位同学的MCU测量脉冲的高电平时间长度。若单人验收，可以使用逻辑分析仪或者示波器来进行测量。
-3. 回答一个随机的和实验相关的问题。
-
-</div>
+<p>这次实验，目的在于熟悉C语言在嵌入式开发中的使用，学习如何通过串口输出数据给PC，理解如何用C语言操纵MCU的时间。</p>
+<p>本实验配有 <strong><u><font size=6><a href="../lab2_guide/">实验指南</a></font></u></strong> 。</p>
+<h2 id="实验目的">实验目的<a class="headerlink" href="#实验目的" title="Permanent link">&para;</a></h2>
+<ol>
+<li>熟练掌握编写MCU程序的一般方法；</li>
+<li>掌握PC上的串口软件，掌握MCU串口程序编写方法；</li>
+<li>掌握MCU的中断响应程序编写方法；</li>
+<li>熟练掌握MCU的时钟中断配置和时钟中断程序响应程序的编写方法；</li>
+<li>掌握MCU程序的定时和获得时间的方法（采用SysTick和定时器中断两种方法）。</li>
+</ol>
+<h2 id="实验器材">实验器材<a class="headerlink" href="#实验器材" title="Permanent link">&para;</a></h2>
+<h3 id="硬件">硬件<a class="headerlink" href="#硬件" title="Permanent link">&para;</a></h3>
+<p>较实验1增加一块USB转串口模块（CP2102）。</p>
+<h3 id="软件">软件<a class="headerlink" href="#软件" title="Permanent link">&para;</a></h3>
+<p>采用和实验1相同的软件。</p>
+<p>选择合适的串口软件，如PuTTY（Windows）、picocom（Linux、macOS）。</p>
+<h2 id="实验步骤">实验步骤<a class="headerlink" href="#实验步骤" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体步骤，具体的实验步骤请参考 <strong><u><a href="../lab2_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>恢复实验1的连线和程序；</li>
+<li>编写程序，从串口以轮询方式输出“Hello World”；</li>
+<li>编写程序，从串口输出测量到的按钮按下到抬起的时间长度（同样要注意去抖动）；</li>
+<li>编写程序，从某个GPIO口输出方波；</li>
+<li>组内两位同学交叉连线，一位同学的MCU输出脉冲，另一位同学的MCU测量这个脉冲的高电平时间长度（注意两块板子要共地）。</li>
+</ol>
+<h2 id="扩展内容">扩展内容<a class="headerlink" href="#扩展内容" title="Permanent link">&para;</a></h2>
+<ol>
+<li>在轮询之外，用中断、DMA两种方式来输出串口数据；</li>
+<li>用引脚中断来处理按钮和测量时间；</li>
+<li>试探能够测量的最小脉冲宽度。</li>
+</ol>
+<h2 id="实验报告要求">实验报告要求<a class="headerlink" href="#实验报告要求" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体要求，具体的实验步骤请参考 <strong><u><a href="../lab2_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>画出你所实际实施的连接示意图；</li>
+<li>给出实际拍摄的板卡连接照片；</li>
+<li>给出所用的器材的列表；</li>
+<li>给出实验各步骤的源代码和实验结果；</li>
+<li>说明其他所做的扩展内容的情况。</li>
+</ol>
+<h2 id="验收要求">验收要求<a class="headerlink" href="#验收要求" title="Permanent link">&para;</a></h2>
+<ol>
+<li>现场烧录程序，实现在串口输出测量到的按钮按下到抬起的时间长度（使用SysTick或TIM均可）；</li>
+<li>现场烧录程序，实现在某个GPIO口输出方波，另一位同学的MCU测量脉冲的高电平时间长度。若单人验收，可以使用逻辑分析仪或者示波器来进行测量。</li>
+<li>回答一个随机的和实验相关的问题。</li>
+</ol>
+<!-- </div> -->
 
 
 

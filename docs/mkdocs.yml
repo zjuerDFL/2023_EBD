@@ -29,6 +29,7 @@ nav:
     - 实验指南: "lab7/lab7_guide.md"
   - Group Project: "project.md"
   - Download: "download.md"
+  - FAQs: "FAQs.md"
 
 theme:
   name: material

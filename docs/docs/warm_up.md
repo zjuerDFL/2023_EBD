@@ -1,6 +1,8 @@
 # 课前准备
 
-## 1 STM32CubeIDE 安装
+## 1 STM32CubeIDE 安装与美化
+
+### 1.1 下载安装
 
 > STM32CubeIDE是ST公司提供的一款集成开发环境（IDE），用于开发STM32系列的MCU。此IDE基于Eclipse改造，支持Windows，MacOS以及Linux。Lab1-5均需要在此IDE上完成。
 
@@ -13,6 +15,22 @@
     - 解压zip文件后，打开dmg文件，首先双击pkg文件安装ST-Link驱动，然后将app文件拖拽到Applications文件夹中。
     - 安装驱动时，需要在“系统偏好设置-->安全性与隐私”处允许允许这个安装程序。
     - 第一次运行STM32CubeIDE时，需要 **在Applications文件夹中右键点击STM32CubeIDE.app，选择“打开”，然后在弹出的窗口中点击“打开”。** 若直接双击运行，会提示“STM32CubeIDE.app”已损坏，无法打开。这是由于macOS的安全机制导致的，需要手动允许运行一次。
+
+### 1.2 美化
+
+由于 CubeIDE 基于 Eclipse 开发，因此可以使用 Eclipse 的插件来美化 CubeIDE 的界面。
+
+在 Help 栏中选择 Eclipse Marketplace，即可进入插件商店：
+
+<img src="../img/1-1.png" alt="1-1" style="zoom:40%;" />
+
+推荐使用如下插件：
+
+<img src="../img/1-2.png" alt="1-1" style="zoom:60%;" />
+
+安装完插件后，可在 Settings 中进行相关主题设置：
+
+<img src="../img/1-3.png" alt="1-1" style="zoom:40%;" />
     
 ## 2 逻辑分析仪 nanoDLA 教程
 

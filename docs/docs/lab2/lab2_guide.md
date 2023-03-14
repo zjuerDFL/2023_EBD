@@ -168,7 +168,7 @@ CP2102和103板的连线方式如下表所示：
 
 !!! tip "参考资料"
     - [SysTick 定时器](https://cloud.tencent.com/developer/article/1991855)
-    - [SysTick-系统滴答定时器详解](http://t.csdn.cn/xbuvL)
+    - [SysTick-系统滴答定时器详解](https://blog.csdn.net/qq_16519885/article/details/117756815?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22117756815%22%2C%22source%22%3A%22m0_56869604%22%7D&fromshare=blogdetail)
 
 `TASK8` ==请解释 HAL_Delay() 函数的工作原理。在 TASK7 完成后，你的工程是否还可以正常使用 HAL_Delay() ？请简述原因。==（5分）
 

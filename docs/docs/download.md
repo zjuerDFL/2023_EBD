@@ -12,6 +12,10 @@
 
 - <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab2/lab2_guide.pdf" target="_blank" download="lab2_guide.pdf">lab2.pdf</a>
 
-<!-- - <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab3/lab3_guide.md" target="_blank" download="lab3_guide.md" >lab3.md</a>
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab3/lab3_guide.md" target="_blank" download="lab3_guide.md" >lab3.md</a>
 
-- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab3/lab3_guide.pdf" target="_blank" download="lab3_guide.pdf">lab3.pdf</a> -->
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab3/lab3_guide.pdf" target="_blank" download="lab3_guide.pdf">lab3.pdf</a>
+
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab4/lab4_guide.md" target="_blank" download="lab4_guide.md" >lab4.md</a>
+
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab4/lab4_guide.pdf" target="_blank" download="lab4_guide.pdf">lab4.pdf</a>

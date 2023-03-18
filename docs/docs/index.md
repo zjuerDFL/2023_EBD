@@ -19,8 +19,8 @@
 - 个人实验
     - [Lab 1: 亮灯](lab1/lab1.md)
     - [Lab 2: MCU时间实验](lab2/lab2.md)
-    - [Lab 3: 自行车码表](lab3/lab3.md)
-    - [Lab 4: 引导装载程序](lab4/lab4.md)
+    - [Lab 3: 引导装载程序](lab3/lab3.md)
+    - [Lab 4: 自行车码表](lab4/lab4.md)
     - [Lab 5: 温度计](lab5/lab5.md)
     - [Lab 6: 网络温度计](lab6/lab6.md)
     - [Lab 7: 字母板](lab7/lab7.md)

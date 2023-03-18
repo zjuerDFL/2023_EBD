@@ -2,6 +2,8 @@
 
 你好👋！欢迎来到嵌入式系统课程！
 
+课程网站的 **<u>[连接](https://zjuerdfl.github.io/2023_EBD/)</u>** 在此。
+
 本实验文档适用于2022-2023春夏学期 **计算机科学与技术学院** 《嵌入式系统》 **翁恺老师** 班级。
 
 💡在第一次实验课之前，请先完成 **<u>[Warm Up](https://zjuerdfl.github.io/2023_EBD/warm_up/)</u>** 中 **<u>[安装 STM32CubeIDE](https://zjuerdfl.github.io/2023_EBD/warm_up/#1-stm32cubeide-安装)</u>** 的步骤。

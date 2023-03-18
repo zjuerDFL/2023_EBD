@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#实验3-自行车码表" class="md-skip">
+        <a href="#实验3-引导装载程序" class="md-skip">
           Skip to content
         </a>
       
@@ -430,9 +430,75 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          实验要求
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         实验要求
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#扩展内容" class="md-nav__link">
+    扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -776,6 +842,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#扩展内容" class="md-nav__link">
+    扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -792,62 +908,57 @@
   
 
 
-<h1 id="实验3-自行车码表">实验3: 自行车码表<a class="headerlink" href="#实验3-自行车码表" title="Permanent link">&para;</a></h1>
-<div class="admonition danger">
-<p class="admonition-title">本实验尚未发布，内容随时可能发生变化</p>
-</div>
-<div style="display:none">
+<h1 id="实验3-引导装载程序">实验3: 引导装载程序<a class="headerlink" href="#实验3-引导装载程序" title="Permanent link">&para;</a></h1>
+<!-- !!! danger "本实验尚未发布，内容随时可能发生变化" -->
 
-这个实验的目的是掌握如何在MCU上编写裸机程序，掌握中断响应程序的编程方式，理解前后台程序的编程模式。
+<!-- <div style="display:none"> -->
 
-本实验配有 **<u><font size=6>[实验指南](lab3_guide.md)</font></u>** 。
-
-## 配合课程
-
-第三次：嵌入式编程模型
-
-## 实验目的
-
-1. 了解嵌入式裸机编程模型的一般情况；
-2. 熟练掌握前后台编程模型；
-3. 熟练掌握引脚中断响应程序编程方法；
-4. 掌握中断驱动编程模型。
-
-## 实验器材
-
-### 硬件
-
-采用和实验2相同的硬件，增加按钮1个。
-
-### 软件
-
-采用和实验2相同的软件。
-
-## 实验步骤
-
-> 此为实验报告的整体步骤，具体的实验步骤请参考 **<u>[实验指南](lab3_guide.md)</u>** 。
-
-1. 通过面包板在PA11和PA12各连接一个按钮开关到地；
-2. 编写前后台程序，以中断处理时钟定时器和其中一个按钮（模拟钢圈计数），以主循环读取按钮的变化值并根据定时的值做输出，第二个按钮（模拟模式切换）由主程序轮询判断，用以改变输出的数据（速度还是里程）。程序通过串口输出；
-3. 编写中断驱动模式程序，以中断处理时钟定时器和两个按钮（模拟钢圈计数以及模拟模式切换），主程序循环中不做事情。
-
-## 扩展内容
-
-1. 用定时器的外部触发来测量时间。
-2. 用动态队列模式编写程序，中断响应程序里将对应的函数指针加入动态队列，主函数遍历队列来执行。
-
-## 实验报告要求
-
-> 此为实验报告的整体要求，具体的实验步骤请参考 **<u>[实验指南](lab3_guide.md)</u>** 。
-
-1. 画出你所实际实施的连接示意图；
-2. 给出实际拍摄的板卡连接照片；
-3. 给出所用的器材的列表；
-4. 给出源代码和说明；
-5. 给出串口输出的屏幕截图；
-6. 说明其他所做的扩展内容的情况。
-
-</div>
+<p>这个实验的目的是进一步掌握如何在MCU上编写裸机程序，理解bootloader的一般工作原理。</p>
+<p>本实验配有 <strong><u><font size=6><a href="../lab3_guide/">实验指南</a></font></u></strong> 。</p>
+<h2 id="实验目的">实验目的<a class="headerlink" href="#实验目的" title="Permanent link">&para;</a></h2>
+<ol>
+<li>熟练掌握在STM32F103上编写交互程序的方法；</li>
+<li>理解bootloader的一般功能和基本工作原理；</li>
+<li>掌握调整编译链接参数以形成定制的编译结果的方法。</li>
+</ol>
+<h2 id="实验器材">实验器材<a class="headerlink" href="#实验器材" title="Permanent link">&para;</a></h2>
+<p>与实验2相同。</p>
+<h2 id="实验步骤">实验步骤<a class="headerlink" href="#实验步骤" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体步骤，具体的实验步骤请参考 <strong><u><a href="../lab3_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>编写一个交互对话程序，能通过串口收到PC的指令，并分离出命令字和参数，将分离的结果返回；</li>
+<li>写一个简易bootloader，能通过串口执行四条最简单的指令：<ul>
+<li><code>peek &lt;addr&gt;</code> 以一个字为单位读取内存中 addr 位置的数据（addr是4字节对齐，十六进制的
+ 形式，长度为8位十六进制，没有引导字符，例如 <code>00008000</code>），并以十六进制的形式输出结果，输出结果为自然序（高位在前）</li>
+<li><code>poke &lt;addr&gt; &lt;data&gt;</code> 以一个字为单位修改内存中 addr 位置的数据为 data（addr 是 4 字节对齐,十六进制的形式，长度为8位十六进制, data 也是十六进制的形式，长度为8位十六进制，为自然序高位在前）</li>
+<li><code>load &lt;addr&gt;</code> 启动XModem或ZModem协议，从PC接收一段二进制数据，保存在addr开始的RAM（或FLASH）中</li>
+<li><code>run &lt;addr&gt;</code> 运行RAM（或FLASH）地址addr开始的程序</li>
+</ul>
+</li>
+<li>重新编译链接实验1的按钮控制LED程序（必须没有开任何中断），将目标定位在RAM（或FLASH）中，用步骤2的bootloader下载到RAM（或FLASH）中运行。</li>
+</ol>
+<h2 id="扩展内容">扩展内容<a class="headerlink" href="#扩展内容" title="Permanent link">&para;</a></h2>
+<p>增加命令<code>print &lt;addr&gt;</code>，以字符形式输出从addr开始的字节，直到0x00为止，addr不需要是4字节对齐的。</p>
+<h2 id="实验报告要求">实验报告要求<a class="headerlink" href="#实验报告要求" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体要求，具体的实验步骤请参考 <strong><u><a href="../lab3_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>画出你所实际实施的连接示意图；</li>
+<li>给出所用的器材的列表；</li>
+<li>描述所做的实验步骤，给出各步操作的命令和结果；</li>
+<li>给出你的程序的代码，并加以解释；</li>
+<li>给出测试的结果。</li>
+</ol>
+<h2 id="验收要求">验收要求<a class="headerlink" href="#验收要求" title="Permanent link">&para;</a></h2>
+<ol>
+<li>将 bootloader 和对应需要跳转执行的 APP 烧录到MCU中，在验收时使用 <code>run</code> 指令跳转执行 APP；</li>
+<li>现场演示 <code>peek</code> 和 <code>poke</code> 指令的使用，并验证其正确性；</li>
+<li>回答与实验内容相关的问题。</li>
+</ol>
+<!-- </div> -->
 
 
 

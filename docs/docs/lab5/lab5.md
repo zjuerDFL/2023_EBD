@@ -1,8 +1,8 @@
 # 实验5: 温度计
 
-!!! danger "本实验尚未发布，内容随时可能发生变化"
+<!-- !!! danger "本实验尚未发布，内容随时可能发生变化" -->
 
-<div style="display:none">
+<!-- <div style="display:none"> -->
 
 这个实验的目的是理解FreeRTOS的任务调度方式，编写FreeRTOS的应用程序，通过寄存器直接操纵GPIO来驱动外部设备。
 
@@ -63,4 +63,6 @@
 
 ## 验收要求
 
-</div>
+
+
+<!-- </div> -->

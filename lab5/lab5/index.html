@@ -556,9 +556,95 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          实验要求
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         实验要求
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+    <nav class="md-nav" aria-label="实验器材">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#硬件" class="md-nav__link">
+    硬件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软件" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#自选扩展内容" class="md-nav__link">
+    自选扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -776,6 +862,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+    <nav class="md-nav" aria-label="实验器材">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#硬件" class="md-nav__link">
+    硬件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软件" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#自选扩展内容" class="md-nav__link">
+    自选扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -793,71 +949,66 @@
 
 
 <h1 id="实验5-温度计">实验5: 温度计<a class="headerlink" href="#实验5-温度计" title="Permanent link">&para;</a></h1>
-<div class="admonition danger">
-<p class="admonition-title">本实验尚未发布，内容随时可能发生变化</p>
-</div>
-<div style="display:none">
+<!-- !!! danger "本实验尚未发布，内容随时可能发生变化" -->
 
-这个实验的目的是理解FreeRTOS的任务调度方式，编写FreeRTOS的应用程序，通过寄存器直接操纵GPIO来驱动外部设备。
+<!-- <div style="display:none"> -->
 
-本实验配有 **<u><font size=6>[实验指南](lab5_guide.md)</font></u>** 。
-
-## 实验目的
-
-1. 掌握FreeRTOS的应用程序编写；
-2. 理解如何直接操纵GPIO；
-3. 掌握单总线设备的访问方式；
-4. 掌握7段数码管的时分复用驱动方式。
-
-## 实验器材
-
-### 硬件
-
-- STM32F103核心板1块；
-- ST-Link板1块；
-- USB串口板1块；
-- 面包板1块；
-- 四位7段数码管（共阳）1颗；
-- 360Ω 1/8W电阻2颗；
-- DHT-11 温湿度传感器1个；
-- 杜邦线若干。
-
-### 软件
-
-- PC上的ST-Link的驱动程序；
-- PC上的USB-TTL串口线配套的驱动程序；
-- PC上的串口终端软件，如picocom、putty等。
-
-## 实验步骤
-
-> 此为实验报告的整体步骤，具体的实验步骤请参考 **<u>[实验指南](lab5_guide.md)</u>** 。
-
-1. 设计输出方案，画连线示意图；
-2. 在面包板上连线，完成外部电路；
-3. 编写程序，测试程序和电路；
-   1. 测试、实现FreeRTOS对GPIO的访问；
-   2. 实现DHT-11数据的读；
-   3. 使用逻辑分析仪查看DHT-11数据线上的时序
-   4. 实现以时分复用方式在四位7段数码管上依次显示0000-9999的数字；
-   5. 用两个FreeRTOS任务，一个定时读DHT-11数据，一个轮流驱动数码管，一秒一次显示当前温度和湿度。注意处理好两个任务之间的数据共享。
-
-## 自选扩展内容
-
-无。
-
-## 实验报告要求
-
-> 此为实验报告的整体要求，具体的实验步骤请参考 **<u>[实验指南](lab5_guide.md)</u>** 。
-
-1. 画出你所实际实施的连接示意图；
-2. 给出所用的器材的列表；
-3. 画出外部设备的连线图，并附实物照片；
-4. 描述所做的实验步骤，给出各步操作的命令和结果；
-5. 给出代码并解释。
-
-## 验收要求
-
-</div>
+<p>这个实验的目的是理解FreeRTOS的任务调度方式，编写FreeRTOS的应用程序，通过寄存器直接操纵GPIO来驱动外部设备。</p>
+<p>本实验配有 <strong><u><font size=6><a href="../lab5_guide/">实验指南</a></font></u></strong> 。</p>
+<h2 id="实验目的">实验目的<a class="headerlink" href="#实验目的" title="Permanent link">&para;</a></h2>
+<ol>
+<li>掌握FreeRTOS的应用程序编写；</li>
+<li>理解如何直接操纵GPIO；</li>
+<li>掌握单总线设备的访问方式；</li>
+<li>掌握7段数码管的时分复用驱动方式。</li>
+</ol>
+<h2 id="实验器材">实验器材<a class="headerlink" href="#实验器材" title="Permanent link">&para;</a></h2>
+<h3 id="硬件">硬件<a class="headerlink" href="#硬件" title="Permanent link">&para;</a></h3>
+<ul>
+<li>STM32F103核心板1块；</li>
+<li>ST-Link板1块；</li>
+<li>USB串口板1块；</li>
+<li>面包板1块；</li>
+<li>四位7段数码管（共阳）1颗；</li>
+<li>360Ω &#8539;W电阻2颗；</li>
+<li>DHT-11 温湿度传感器1个；</li>
+<li>杜邦线若干。</li>
+</ul>
+<h3 id="软件">软件<a class="headerlink" href="#软件" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PC上的ST-Link的驱动程序；</li>
+<li>PC上的USB-TTL串口线配套的驱动程序；</li>
+<li>PC上的串口终端软件，如picocom、putty等。</li>
+</ul>
+<h2 id="实验步骤">实验步骤<a class="headerlink" href="#实验步骤" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体步骤，具体的实验步骤请参考 <strong><u><a href="../lab5_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>设计输出方案，画连线示意图；</li>
+<li>在面包板上连线，完成外部电路；</li>
+<li>编写程序，测试程序和电路；</li>
+<li>测试、实现FreeRTOS对GPIO的访问；</li>
+<li>实现DHT-11数据的读；</li>
+<li>使用逻辑分析仪查看DHT-11数据线上的时序</li>
+<li>实现以时分复用方式在四位7段数码管上依次显示0000-9999的数字；</li>
+<li>用两个FreeRTOS任务，一个定时读DHT-11数据，一个轮流驱动数码管，一秒一次显示当前温度和湿度。注意处理好两个任务之间的数据共享。</li>
+</ol>
+<h2 id="自选扩展内容">自选扩展内容<a class="headerlink" href="#自选扩展内容" title="Permanent link">&para;</a></h2>
+<p>无。</p>
+<h2 id="实验报告要求">实验报告要求<a class="headerlink" href="#实验报告要求" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体要求，具体的实验步骤请参考 <strong><u><a href="../lab5_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>画出你所实际实施的连接示意图；</li>
+<li>给出所用的器材的列表；</li>
+<li>画出外部设备的连线图，并附实物照片；</li>
+<li>描述所做的实验步骤，给出各步操作的命令和结果；</li>
+<li>给出代码并解释。</li>
+</ol>
+<h2 id="验收要求">验收要求<a class="headerlink" href="#验收要求" title="Permanent link">&para;</a></h2>
+<!-- </div> -->
 
 
 

@@ -4,7 +4,9 @@
 
 <div style="display:none">
 
-本实验配有[实验指南](lab6_guide.md)。
+本实验需要使用 ESP32 开发板以及嵌入式 Linux 开发板 RK3586，利用 DHT-11 温湿度传感器实现网络温度计。
+
+本实验配有 **<u><font size=6>[实验指南](lab6_guide.md)</font></u>** 。
 
 ## 实验目的 
 

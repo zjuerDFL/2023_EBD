@@ -27,7 +27,9 @@ nav:
   - Lab7:
     - 实验要求: "lab7/lab7.md"
     - 实验指南: "lab7/lab7_guide.md"
-  - Group Project: "project.md"
+  - Group Project:
+    - 大程概览: "project/project.md"
+    - 参考资料: "project/reference.md"
   - Download: "download.md"
   - FAQs: "FAQs.md"
 

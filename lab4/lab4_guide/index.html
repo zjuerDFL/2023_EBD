@@ -1065,7 +1065,7 @@
 <p>注意，上述参考资料所使用的开发环境不完全相同，也存在一些小错误。请注意参考。</p>
 </div>
 <p><code>TASK3</code> <mark>请给出配置ioc文件中中断引脚的几个关键配置的截图</mark>（5分）</p>
-<p><code>TASK4</code> <mark>编写前后台程序，将去抖等操作放置在主循环中，在中断服务函数中使用尽量少的操作，完成LED灯状态的切换。请在此处给出 <code>while(1)</code> 以及 <code>HAL_GPIO_EXTI_Callback()</code> 中的代码。</mark>（5分）</p>
+<p><code>TASK4</code> <mark>编写前后台程序，在中断服务函数中使用尽量少的操作，完成LED灯状态的切换。请在此处给出 <code>while(1)</code> 以及 <code>HAL_GPIO_EXTI_Callback()</code> 中的代码。</mark>（5分）</p>
 <p><code>TASK5</code> <mark>编写中断驱动模式程序，在中断服务函数中完成LED灯状态的切换（包括去抖操作），主循环中不进行任何操作。请在此处给出 <code>HAL_GPIO_EXTI_Callback()</code> 中的代码。</mark>（5分）</p>
 <p><code>TASK6</code> <mark>在以上程序的基础上，实现每次切换LED灯状态时，在串口输出相应的信息。请在此处给出实现的代码以及串口输出的信息截图。</mark>（5分）</p>
 <p><code>TASK7</code> <mark>思考：若在中断函数中使用轮询的方式向串口发送信息，或者在中断函数中使用延时进行去抖操作，会有什么潜在问题？</mark>（5分）</p>

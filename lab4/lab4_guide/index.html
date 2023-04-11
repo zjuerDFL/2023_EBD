@@ -1069,7 +1069,7 @@
 <p><code>TASK5</code> <mark>编写中断驱动模式程序，在中断服务函数中完成LED灯状态的切换（包括去抖操作），主循环中不进行任何操作。请在此处给出 <code>HAL_GPIO_EXTI_Callback()</code> 中的代码。</mark>（5分）</p>
 <p><code>TASK6</code> <mark>在以上程序的基础上，实现每次切换LED灯状态时，在串口输出相应的信息。请在此处给出实现的代码以及串口输出的信息截图。</mark>（5分）</p>
 <p><code>TASK7</code> <mark>思考：若在中断函数中使用轮询的方式向串口发送信息，或者在中断函数中使用延时进行去抖操作，会有什么潜在问题？</mark>（5分）</p>
-<p><code>TASK8</code> <mark>在TASK3中，你能够在中断服务函数中正常使用<code>HAL_Delay()</code>函数吗？如果不能，你的解决方法是什么？</mark>（5分） </p>
+<p><code>TASK8</code> <mark>在TASK5中，你能够在中断服务函数中正常使用<code>HAL_Delay()</code>函数吗？如果不能，你的解决方法是什么？</mark>（5分） </p>
 <div class="admonition tip">
 <p class="admonition-title">提示</p>
 <p>在ioc文件配置中的 System Core -&gt; NVIC Settings 中，可以配置中断优先级，其中，数字越小，优先级越高。在中断服务函数中，可以通过 <code>HAL_NVIC_GetPriority()</code> 函数获取中断优先级，通过 <code>HAL_NVIC_SetPriority()</code> 函数设置中断优先级。</p>

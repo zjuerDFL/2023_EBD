@@ -4,6 +4,16 @@
 
 <!-- <div style="display:none"> -->
 
+???+ note "4-17 更新内容"
+
+    - 增加 STM32F103C8T6 **<u>[存储器布局](#update1)</u>** 的说明
+
+    - 增加 **<u>[官方 IAP 使用提示](#update2)</u>** 
+
+    - 增加 **<u>[Windows 下支持X/Y/ZModem协议的串口调试工具](#update3)</u>**
+
+    - 增加 **<u>[生成 bin 文件的方法](#update4)</u>**
+
 请跟随实验指南完成实验，完成文档中所有的`TASK`。`BONUS`部分的内容完成可作为加分，但报告的总分不应超过100分。请下载此指南作为实验报告模版，将填充完成的实验报告导出为PDF格式，并命名为“学号_姓名_lab3.pdf”，上传至学在浙大平台。下载请点击 **<u>[这里](../download.md)</u>** 。
 
 此实验要求实现一个简易的 boot loader ，能够通过串口执行四条最简单的指令：`peek`、`poke`、`load`和`run`。
@@ -39,6 +49,18 @@
 ## 3 Boot Loader 实现
 
 在实现了指令解析之后，我们可以具体实现 Bootloader 中 `peek`、`poke`、`load` 和 `run` 指令。
+
+<span id="update1">
+
+在实现 Bootloader 之前，我们需要了解 103 板的存储器布局，我们实验所用的开发板型号为 STM32F103C8T6，其 Flash memory 为 **64KB** ，SRAM 为 **20KB** 。其中，Flash memory 的起始地址为 `0x08000000`，SRAM 的起始地址为 `0x20000000`。如下图所示：
+
+<img src="../img/3-1.png" alt="3-1" style="zoom:50%;" />
+
+> 需要注意，此图中 Flash memory 为 128KB（因为图片为 STM32F103xx 通用的存储器布局），我们所用的开发板 Flash memory 为 64KB。如需要更加详细了解，可以参考 **<u>[STM32F103xx 数据手册](https://www.st.com/resource/zh/datasheet/stm32f103c8.pdf)</u>** 。
+
+**需要重点关注 Flash memory 以及 SRAM 所在的地址区间，以免进行错误访问。** 在接下来实现 load 指令时，所产生的超时错误，很有可能是由于尝试擦除或者写入 Flash memory 以外的地址所导致的。
+
+</span>
 
 ### 3.1 peek 指令
 
@@ -116,10 +138,26 @@ XModem 包的格式如下：
 
 可以参考如上流程，实现 XModem 协议，以便在串口上实现文件传输。此处允许使用开源的 XModem 协议实现，但需要在报告中说明使用的开源代码的出处。
 
-同时，也可以参考官方给出的 **<u>[IAP](https://www.st.com/zh/embedded-software/x-cube-iap-usart.html)</u>** （使用YModem实现）
-
 ???+ tip "参考资料"
     [XModem 协议](https://zhuanlan.zhihu.com/p/34464259)
+
+同时，也可以参考官方给出的 **<u>[IAP](https://www.st.com/zh/embedded-software/x-cube-iap-usart.html)</u>** 。此 IAP 使用 YModem 协议，实现将串口文件从上位机传输到 STM32 的 Flash 中。
+
+<span id="update2">
+
+???+ note "IAP 提示"
+
+    如果你想要使用以上 ST 官方提供的 IAP 进行移植，需要注意以下几点：
+
+    - 需要在 AN4657-STM32Cube_IAP_using_UART/Projects/STM3210C_EVAL/IAP_Main 中寻找 `ymodem.c` 和 `ymodem.h`，放在Cube IDE工程的Drivers目录下，鼠标右键点击IDE右侧栏中含有ymodem.h等头文件的目录，选择“Add/Remove Include Path”，将其加入编译时的`-I`选项中。
+
+    - 需要按需修改接收到的文件所存储的位置（更改 `APPLICATION_ADDRESS` ）。
+
+    - 需要更改擦除 Flash 的范围（更改 `USER_FLASH_END_ADDRESS` ），以免擦除到其余地址导致错误。
+
+    - 此 IAP 中使用的 `Ymodem_Receive`使用的是轮询模型，在调用此函数时，若之前开启了串口中断，需要将其关闭，否则会导致串口占用，无法进行文件传输。
+
+</span>
 
 #### 3.3.2 指令实现
 
@@ -128,6 +166,18 @@ XModem 包的格式如下：
 注意，如果需要将数据保存在 FLASH 中，需要先擦除对应的扇区，然后再写入数据。因为在对 FLASH 进行编程时，只能将1变为0。擦除操作即为将Flash的某个扇区全部写入1。擦除完毕后，对 FLASH 进行编程，即可实现改变 FLASH 中的数据。
 
 当然，本实验中没有要求一定要将数据保存在 FLASH 中，也可以将数据保存在 RAM 中，这样操作会更加简单，但数据会在断电后丢失。
+
+<span id="update3">
+
+如果你需要使用串口调试工具进行文件传输（即用软件帮助你做好相关协议的打包工作），在 MacOS 或者 Linux 系统下，可以继续使用 Picocom，但在 Windows 系统下，PuTTy 和 CoolTerm 对 XModem/YModem/ZModem 协议的支持不太好，可以尝试使用以下软件：
+
+- **<u>[Xshell](https://www.netsarang.com/en/xshell/)</u>**
+
+- **<u>[SecureCRT](https://www.vandyke.com/products/securecrt/)</u>**
+
+- **<u>[TeraTerm](https://ttssh2.osdn.jp/index.html.en)</u>**
+
+</span>
 
 ???+ tip "参考资料"
     HAL 库中提供了对 FLASH 的操作函数，可以直接使用。具体的函数请参考 **<u><a href="https://www.st.com/content/ccc/resource/technical/document/user_manual/2f/71/ba/b8/75/54/47/cf/DM00105879.pdf/files/DM00105879.pdf/jcr:content/translations/en.DM00105879.pdf" target="_blank">HAL手册</a></u>**。
@@ -154,7 +204,17 @@ XModem 包的格式如下：
 
 `TASK11` ==请给出实现 run 指令的关键代码。要求对代码做出较为详细的解释。==（10分）
 
-实现 `run` 指令后，可以使用 `load` 指令将编译好的其他二进制文件烧录到 RAM 中，然后使用 `run` 指令运行。你所编译的二进制文件（elf格式）可以在对应工程的 `debug` 目录下找到。
+实现 `run` 指令后，可以使用 `load` 指令将编译好的其他二进制文件烧录到 RAM 中，然后使用 `run` 指令运行。
+
+<span id="update4">
+
+STM32CubeIDE 编译默认产生的二进制文件为 `*.elf` 格式，而在使用 `load` 指令烧录到 RAM 中时，需要使用 `*.bin` 格式的文件。可以在 "Project -> Properties -> C/C++ Build -> Settings -> MCU Post build outputs" 中勾选 "Convert to binary file (-O binary)"，之后便可在对应工程的 Debug 文件夹中找到对应的 `*.bin` 文件。如下图所示：
+
+<img src="../img/3-2.png" alt="3-2" style="zoom:50%;" />
+
+<img src="../img/3-3.png" alt="3-3" style="zoom:50%;" />
+
+</span>
 
 需要注意的是，在编译二进制文件时，默认的入口地址为 0x08000000，即 Flash 的起始地址。由于存在了 bootloader，我们想要同时烧录其他程序在103板上时，需要对 Flash 的起始地址进行偏移，否则会导致覆盖，或者导致错误的中断偏移量，从而导致程序无法正常运行。具体的偏移量可以在 `STM32F103C8TX_FLASH.ld` 文件中找到`Memories definition`这一项，并进行修改。同时需要在`system_stm32f1xx.c`中修改 `VECT_TAB_OFFSET` 的值，以保证中断偏移量的正确。
 

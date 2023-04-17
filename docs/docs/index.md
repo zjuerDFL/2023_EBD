@@ -25,7 +25,7 @@
     - [Lab 6: 网络温度计](lab6/lab6.md)
     - [Lab 7: 字母板](lab7/lab7.md)
 - 组队大程
-    - [Group Project](project.md)
+    - [Group Project](project/project.md)
 
 ## 器材领用
 

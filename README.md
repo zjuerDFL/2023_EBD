@@ -27,7 +27,7 @@
   - [Lab 6: 网络温度计](https://zjuerdfl.github.io/2023_EBD/lab6/lab6/)
   - [Lab 7: 字母板](https://zjuerdfl.github.io/2023_EBD/lab7/lab7/)
 - 组队大程
-  - [Group Project](https://zjuerdfl.github.io/2023_EBD/project/)
+  - [Group Project](https://zjuerdfl.github.io/2023_EBD/project/project/)
 
 ## 器材领用
 

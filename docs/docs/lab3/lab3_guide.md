@@ -149,7 +149,7 @@ XModem 包的格式如下：
 
     如果你想要使用以上 ST 官方提供的 IAP 进行移植，需要注意以下几点：
 
-    - 需要在 AN4657-STM32Cube_IAP_using_UART/Projects/STM3210C_EVAL/IAP_Main 中寻找 `ymodem.c` 和 `ymodem.h`，放在Cube IDE工程的Drivers目录下，鼠标右键点击IDE右侧栏中含有ymodem.h等头文件的目录，选择“Add/Remove Include Path”，将其加入编译时的`-I`选项中。
+    - 需要在 AN4657-STM32Cube_IAP_using_UART / Projects / STM3210C_EVAL / IAP_Main 中寻找 `ymodem.c` 和 `ymodem.h`，放在Cube IDE工程的Drivers目录下，鼠标右键点击IDE右侧栏中含有ymodem.h等头文件的目录，选择“Add/Remove Include Path”，将其加入编译时的`-I`选项中。
 
     - 需要按需修改接收到的文件所存储的位置（更改 `APPLICATION_ADDRESS` ）。
 

@@ -1225,7 +1225,7 @@
 <p>如果你想要使用以上 ST 官方提供的 IAP 进行移植，需要注意以下几点：</p>
 <ul>
 <li>
-<p>需要在 AN4657-STM32Cube_IAP_using_UART/Projects/STM3210C_EVAL/IAP_Main 中寻找 <code>ymodem.c</code> 和 <code>ymodem.h</code>，放在Cube IDE工程的Drivers目录下，鼠标右键点击IDE右侧栏中含有ymodem.h等头文件的目录，选择“Add/Remove Include Path”，将其加入编译时的<code>-I</code>选项中。</p>
+<p>需要在 AN4657-STM32Cube_IAP_using_UART / Projects / STM3210C_EVAL / IAP_Main 中寻找 <code>ymodem.c</code> 和 <code>ymodem.h</code>，放在Cube IDE工程的Drivers目录下，鼠标右键点击IDE右侧栏中含有ymodem.h等头文件的目录，选择“Add/Remove Include Path”，将其加入编译时的<code>-I</code>选项中。</p>
 </li>
 <li>
 <p>需要按需修改接收到的文件所存储的位置（更改 <code>APPLICATION_ADDRESS</code> ）。</p>
@@ -1260,7 +1260,7 @@
 <details class="tip" open="open">
 <summary>参考资料</summary>
 <p>HAL 库中提供了对 FLASH 的操作函数，可以直接使用。具体的函数请参考 <strong><u><a href="https://www.st.com/content/ccc/resource/technical/document/user_manual/2f/71/ba/b8/75/54/47/cf/DM00105879.pdf/files/DM00105879.pdf/jcr:content/translations/en.DM00105879.pdf" target="_blank">HAL手册</a></u></strong>。</p>
-<p>也可参考如下链接：<strong><u><a href="https://www.stlee.tech/2020/06/17/STM32%E4%B8%ADFlash%E7%9A%84%E8%AF%BB%E5%86%99%EF%BC%88HAL%E5%BA%93%EF%BC%89/">STM32中Flash的读写（HAL库）</a></u></strong> </p>
+<p>也可参考如下链接：<strong><u><a href="https://doc.embedfire.com/mcu/stm32/f103mini/hal/zh/latest/book/FLASH.html">STM32中Flash的读写（HAL库）</a></u></strong> </p>
 </details>
 <p><code>TASK9</code> <mark>请给出实现 load 指令的关键代码。要求对协议实现或者借用开源代码的部分做出适当的解释。</mark>（15分）</p>
 <p><code>TASK10</code> <mark>在烧录后做若干测试，并配合 peek 指令证明结果正确性，请给出相应的截图。烧录的二进制文件可以自己使用 <strong><u><a href="https://imhex.werwolv.net">ImHex</a></u></strong> 或其他编辑器创建。</mark>（5分）</p>

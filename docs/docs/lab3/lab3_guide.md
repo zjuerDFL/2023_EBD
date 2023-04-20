@@ -182,7 +182,7 @@ XModem 包的格式如下：
 ???+ tip "参考资料"
     HAL 库中提供了对 FLASH 的操作函数，可以直接使用。具体的函数请参考 **<u><a href="https://www.st.com/content/ccc/resource/technical/document/user_manual/2f/71/ba/b8/75/54/47/cf/DM00105879.pdf/files/DM00105879.pdf/jcr:content/translations/en.DM00105879.pdf" target="_blank">HAL手册</a></u>**。
 
-    也可参考如下链接：**<u>[STM32中Flash的读写（HAL库）](https://www.stlee.tech/2020/06/17/STM32%E4%B8%ADFlash%E7%9A%84%E8%AF%BB%E5%86%99%EF%BC%88HAL%E5%BA%93%EF%BC%89/)</u>** 
+    也可参考如下链接：**<u>[STM32中Flash的读写（HAL库）](https://doc.embedfire.com/mcu/stm32/f103mini/hal/zh/latest/book/FLASH.html)</u>** 
 
 `TASK9` ==请给出实现 load 指令的关键代码。要求对协议实现或者借用开源代码的部分做出适当的解释。==（15分）
 

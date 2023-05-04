@@ -619,9 +619,95 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          实验要求
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         实验要求
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+    <nav class="md-nav" aria-label="实验器材">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#硬件" class="md-nav__link">
+    硬件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软件" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#自选扩展内容" class="md-nav__link">
+    自选扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -824,6 +910,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#实验目的" class="md-nav__link">
+    实验目的
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验器材" class="md-nav__link">
+    实验器材
+  </a>
+  
+    <nav class="md-nav" aria-label="实验器材">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#硬件" class="md-nav__link">
+    硬件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#软件" class="md-nav__link">
+    软件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验步骤" class="md-nav__link">
+    实验步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#自选扩展内容" class="md-nav__link">
+    自选扩展内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实验报告要求" class="md-nav__link">
+    实验报告要求
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#验收要求" class="md-nav__link">
+    验收要求
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -844,55 +1000,71 @@
 <div class="admonition danger">
 <p class="admonition-title">本实验尚未发布，内容随时可能发生变化</p>
 </div>
-<div style="display:none">
+<!-- <div style="display:none"> -->
 
-本实验需要使用 ESP32 开发板以及嵌入式 Linux 开发板 RK3586，利用 DHT-11 温湿度传感器实现网络温度计。
-
-本实验配有 **<u><font size=6>[实验指南](lab6_guide.md)</font></u>** 。
-
-## 实验目的 
-
-1. 掌握microPython的应用程序编写；
-2. 理解如何直接操纵GPIO；
-3. 掌握MQTT的消息发布和订阅；
-4. 掌握支持Linux的嵌入式板卡的基本使用。
-
-## 实验器材
-
-### 硬件
-
-- ESP32 1块；
-- DHT-11 温湿度传感器1个；
-- 面包板1块；
-- 杜邦线、面包线若干；
-- RK3568板。
-
-### 软件
-
-- ESP32烧录程序：esptool
-- 串口终端软件，如picocom、putty等；
-- ESP32远程shell：mpfshell
-
-## 实验步骤
-
-1. 烧录microPython到ESP32；
-2. 配置ESP32连接自己的Wi-Fi AP，配置好自己习惯的编程/运行环境；
-3. 编写Python程序，读取DHT-11的温度/湿度，直接print输出，远程登录查看；
-4. 在嵌入式Linux上编译安装MQTT服务器（broker）；
-5. 下载上传micoPython的MQTT库，订阅在broker上，定时发送温度湿度消息；
-6. 用手机/PC上的MQTT终端软件（如iOS上的MQTTAnalyzer）查看实时数据。
-
-## 自选扩展内容
-
-无。
-
-## 实验报告要求
-
-1. 画出你所实际实施的连接示意图；
-2. 描述所做的实验步骤，给出各步操作的命令和结果；
-3. 给出代码并解释。
-
-</div>
+<p>本实验需要使用 ESP32 开发板以及嵌入式 Linux 开发板 RK3586，利用 DHT-11 温湿度传感器实现网络温度计。</p>
+<p>本实验配有 <strong><u><font size=6><a href="../lab6_guide/">实验指南</a></font></u></strong> 。</p>
+<h2 id="实验目的">实验目的<a class="headerlink" href="#实验目的" title="Permanent link">&para;</a></h2>
+<ol>
+<li>掌握microPython的应用程序编写；</li>
+<li>理解如何直接操纵GPIO；</li>
+<li>掌握MQTT的消息发布和订阅；</li>
+<li>掌握支持Linux的嵌入式板卡的基本使用。</li>
+</ol>
+<h2 id="实验器材">实验器材<a class="headerlink" href="#实验器材" title="Permanent link">&para;</a></h2>
+<h3 id="硬件">硬件<a class="headerlink" href="#硬件" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ESP32 1块；</li>
+<li>DHT-11 温湿度传感器1个；</li>
+<li>面包板1块；</li>
+<li>杜邦线、面包线若干；</li>
+<li>RK3568板。</li>
+</ul>
+<h3 id="软件">软件<a class="headerlink" href="#软件" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ESP32烧录程序：esptool</li>
+<li>串口终端软件，如picocom、putty等；</li>
+<li>ESP32远程shell：mpfshell</li>
+</ul>
+<h2 id="实验步骤">实验步骤<a class="headerlink" href="#实验步骤" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体步骤，具体的实验步骤请参考 <strong><u><a href="../lab6_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>烧录microPython到ESP32；</li>
+<li>配置ESP32连接自己的Wi-Fi AP，配置好自己习惯的编程/运行环境；</li>
+<li>编写Python程序，读取DHT-11的温度/湿度，直接print输出，远程登录查看；</li>
+<li>在嵌入式Linux上编译安装MQTT服务器（broker）；</li>
+<li>下载上传micoPython的MQTT库，订阅在broker上，定时发送温度湿度消息；</li>
+<li>用手机/PC上的MQTT终端软件（如iOS上的MQTTAnalyzer）查看实时数据。</li>
+</ol>
+<h2 id="自选扩展内容">自选扩展内容<a class="headerlink" href="#自选扩展内容" title="Permanent link">&para;</a></h2>
+<p>无。</p>
+<h2 id="实验报告要求">实验报告要求<a class="headerlink" href="#实验报告要求" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>此为实验报告的整体步骤，具体的实验步骤请参考 <strong><u><a href="../lab6_guide/">实验指南</a></u></strong> 。</p>
+</blockquote>
+<ol>
+<li>画出你所实际实施的连接示意图；</li>
+<li>描述所做的实验步骤，给出各步操作的命令和结果；</li>
+<li>给出代码并解释。</li>
+</ol>
+<h2 id="验收要求">验收要求<a class="headerlink" href="#验收要求" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>使用 ESP32 配合 DHT-11 测量温湿度，直接 print 输出，并在远程终端查看；</p>
+</li>
+<li>
+<p>使用 ESP32 配合 DHT-11 测量温湿度，通过 MQTT 协议将数据发送到嵌入式 Linux 上的 MQTT broker，在手机 / PC 上通过 MQTT 终端软件查看数据；</p>
+<blockquote>
+<p>验收时可提前到实验室为 3568 板上电启动并配置好网络，验收时将 3568 板放在实验室自己位置上即可。或者保证能够访问到 3568 板的情况下，也可将其放在寝室，不一定要将器材带到实验室。</p>
+</blockquote>
+</li>
+<li>
+<p>回答实验相关问题。</p>
+</li>
+</ol>
+<!-- </div> -->
 
 
 

@@ -23,3 +23,7 @@
 - <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab5/lab5_guide.md" target="_blank" download="lab5_guide.md" >lab5.md</a>
 
 - <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab5/lab5_guide.pdf" target="_blank" download="lab5_guide.pdf">lab5.pdf</a>
+
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab6/lab6_guide.md" target="_blank" download="lab6_guide.md" >lab6.md</a>
+
+- <a href="https://raw.githubusercontent.com/zjuerdfl/2023_EBD/main/docs/docs/lab6/lab6_guide.pdf" target="_blank" download="lab6_guide.pdf">lab6.pdf</a>

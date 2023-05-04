@@ -992,18 +992,30 @@
 <h2 id="验收方式">验收方式<a class="headerlink" href="#验收方式" title="Permanent link">&para;</a></h2>
 <p>每个月做一次阶段性验收。每个小组需要按照要求在学在浙大平台上提交 PDF 格式的阶段性报告。</p>
 <h3 id="m1-方案验收">M1: 方案验收<a class="headerlink" href="#m1-方案验收" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Deadline: 2023.04.09 23:55</p>
+</div>
 <p>要求阶段性报告中包含至少以下内容：</p>
 <ol>
 <li>设计的应用的基本情况：功能、组成、技术路线、分工</li>
 <li>SX1278 基础实验，能实现一个节点向另一个节点单方向的无线报文传输。SX1278 的基础实验可以参考 <strong><u><a href="../reference/#sx1278-使用教程">SX1278 使用教程</a></u></strong> 。</li>
 </ol>
-<div class="admonition warning">
-<p class="admonition-title">Deadline: 2023.04.09 23:55</p>
-</div>
 <h3 id="m2-物理层验收能实现点对点通信">M2: 物理层验收，能实现点对点通信<a class="headerlink" href="#m2-物理层验收能实现点对点通信" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>待补充</p>
-</blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Deadline: 2023.05.06 23:55</p>
+</div>
+<p>M2 要求实现物理层，能做到两个节点，每个节点只使用一个 1278 模块，实现双向数据通信，支持：</p>
+<ol>
+<li>
+<p>验证：指报文带有源、目的两个编号，接收端能只处理目的为自己的报文，丢弃不需要的报文（但是 M3 要记录 heardlist ）；</p>
+</li>
+<li>
+<p>ACK/NAK：指报文带有序列号，接收方收到后要回复 ACK 或 NAK 包，发送方在 TO 或收到 NAK 的情况下，要择机重发，重发一定次数（如 5 次）后放弃。 ACK 和 NAK 的报文自己设计；</p>
+</li>
+<li>
+<p>错误重发：指报文有 CRC ，并非芯片自己的 CRC ，而是在其上自己设计的 CRC ，校验不正确的情况下回复 NAK 。</p>
+</li>
+</ol>
 <h3 id="m3-链路层和传输层验收能实现存储转发">M3: 链路层和传输层验收，能实现存储转发<a class="headerlink" href="#m3-链路层和传输层验收能实现存储转发" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>待补充</p>

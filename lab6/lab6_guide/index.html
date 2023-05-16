@@ -2216,10 +2216,17 @@ Examples:
 <p>mpfshell 是一个基于 Python 的命令行工具，可以用来与 ESP32 进行交互。它可以用来进行文件传输、执行 Python 脚本、执行 REPL 交互等。</p>
 <h4 id="151-安装-mpfshell">1.5.1 安装 mpfshell<a class="headerlink" href="#151-安装-mpfshell" title="Permanent link">&para;</a></h4>
 <p>mpfshell 可以通过 pip 进行安装：</p>
+<p>对于 MacOS / Linux，可通过如下命令安装</p>
 <div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>mpfshell
 </code></pre></div>
+<p>对于 Windows，可通过如下命令安装</p>
+<div class="highlight"><pre><span></span><code><span class="n">pip3</span> <span class="n">install</span> <span class="n">mpfshell</span><span class="p">==</span><span class="n">0</span><span class="p">.</span><span class="n">9</span><span class="p">.</span><span class="n">1</span>
+</code></pre></div>
+<blockquote>
+<p>0.9.1 之后的mpfshell在windows上会出现闪退的问题，因此此处选用 0.9.1 版本</p>
+</blockquote>
 <h4 id="152-bug-fix">1.5.2 Bug Fix<a class="headerlink" href="#152-bug-fix" title="Permanent link">&para;</a></h4>
-<p>要正常使用 mpfshell，需要在安装之后手动修复一些 bug。</p>
+<p>对于 MacOS 以及 Linux 用户，要正常使用 mpfshell，需要在安装之后手动修复一些 bug。Windows 用户则可跳过此步骤。</p>
 <p>打开 PATH-TO-YOUR-PY-ENV / site-packages / mp / conwebsock.py，找到 <code>def on_message(self, ws, message):</code> 和 <code>def on_error(self, ws, error):</code>，去掉两个函数参数表中的ws，保存时要输入sudo密码。</p>
 <ul>
 <li>

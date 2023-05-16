@@ -243,13 +243,23 @@ mpfshell 是一个基于 Python 的命令行工具，可以用来与 ESP32 进�
 
 mpfshell 可以通过 pip 进行安装：
 
+对于 MacOS / Linux，可通过如下命令安装
+
 ```bash
 pip3 install mpfshell
 ```
 
+对于 Windows，可通过如下命令安装
+
+```powershell
+pip3 install mpfshell==0.9.1
+```
+
+> 0.9.1 之后的mpfshell在windows上会出现闪退的问题，因此此处选用 0.9.1 版本
+
 #### 1.5.2 Bug Fix
 
-要正常使用 mpfshell，需要在安装之后手动修复一些 bug。
+对于 MacOS 以及 Linux 用户，要正常使用 mpfshell，需要在安装之后手动修复一些 bug。Windows 用户则可跳过此步骤。
 
 打开 PATH-TO-YOUR-PY-ENV / site-packages / mp / conwebsock.py，找到 `def on_message(self, ws, message):` 和 `def on_error(self, ws, error):`，去掉两个函数参数表中的ws，保存时要输入sudo密码。
 

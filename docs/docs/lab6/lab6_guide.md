@@ -279,6 +279,8 @@ mpfshell 的详细使用方法可以参考 **<u>[mpfshell 文档](https://wiki.s
 
 `TASK12` ==请给出成功连接 mpfshell 后的截图，要求使用 `ls` 等命令，并进入 REPL 环境测试。==（5分）
 
+> 如果不想使用 mpfshell，此处也可以使用 uPyCraft 来代替完成实验，TASK12 改为上传 uPyCraft 对应内容即可。uPyCraft 的安装和使用教程可参考 **<u>[这里](https://randomnerdtutorials.com/install-upycraft-ide-windows-pc-instructions/)</u>** 。
+
 ### 1.6 RT-Thread MicroPython 插件（5分）
 
 RT-Thread MicroPython 插件是 RT-Thread 官方提供的一个 MicroPython 插件，支持在 ESP32 上运行 MicroPython，实现 MicroPython 的 REPL 交互、文件传输、网络连接等功能。

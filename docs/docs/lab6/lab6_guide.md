@@ -1,5 +1,9 @@
 # 实验6指南
 
+???+ note "5-30 更新内容"
+
+    - **<u>[mpfshell](#15-mpfshell5分)</u>** 部分增加 uPyCraft，可以使用 uPyCraft 代替 mpfshell 完成实验
+
 <!-- !!! danger "警告"
     本实验指南尚未发布，内容随时可能发生变化。
 
